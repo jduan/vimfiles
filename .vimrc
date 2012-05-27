@@ -1,3 +1,6 @@
+" vim-pathogen
+call pathogen#infect()
+
 " p4 commands
 nnoremap @p4a :!p4 add %
 " nnoremap @p4e :!p4 edit %
@@ -14,7 +17,6 @@ map <C-p> :pwd<cr>
 set ignorecase " set ic
 set incsearch
 " set hlsearch " highlight all matches for the pattern
-" set tabstop=8
 syntax on
 set cindent
 set statusline=%<[%02n]\ %F%(\ %m%h%w%y%r%)\ %a%=\ %8l,%c%V/%L\ (%P)\ [%08O:%02B]
@@ -93,7 +95,6 @@ set copyindent           " make autoindent use the same characters to indent
 set directory=/tmp       " store temp files someplace out of the way
 set directory-=.         " . . .and don't store temp files in cwd
 set encoding=utf-8       " unicode
-set expandtab            " spaces, not tabs!
 set foldcolumn=0         " no fold column
 set foldlevelstart=0     " start with all folds closed
 set formatoptions=r      " r - re-insert comment leader on newline
@@ -113,9 +114,10 @@ set ruler                " display cursor position
 set showcmd              " show command-in-progress
 set showmode             " show the current input mode
 set showmatch            " Automagically show matching brackets
-set shiftwidth=4         " four spaces per sw
+set expandtab            " spaces, not tabs!
 set softtabstop=4        " make four spaces act like tabs
 set tabstop=4            " The One True Tab (as of latest revision)
+set shiftwidth=4         " affects what happens when you press >>, << etc
 set terse
 set timeout              " allow keys to timeout
 set title                " do set the xterm title (see 'titleold', set below)
@@ -341,6 +343,3 @@ autocmd BufReadPost *
 
 " <leader>W to remove all trailing white spaces
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
-
-" vim-pathogen
-call pathogen#infect()
