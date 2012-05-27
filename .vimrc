@@ -344,4 +344,3 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
 " vim-pathogen
 call pathogen#infect()
-call pathogen#helptags()
