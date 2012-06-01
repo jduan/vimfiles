@@ -343,3 +343,6 @@ autocmd BufReadPost *
 
 " <leader>W to remove all trailing white spaces
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+
+" auto remove trailing spaces upon save
+autocmd BufWritePre * :%s/\s\+$//e
