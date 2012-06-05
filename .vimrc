@@ -22,7 +22,7 @@ set cindent
 set statusline=%<[%02n]\ %F%(\ %m%h%w%y%r%)\ %a%=\ %8l,%c%V/%L\ (%P)\ [%08O:%02B]
 set laststatus=2
 " map F10 to add a new word entry
-abbr jj \bi<CR>\item<CR>\ei<Esc>kA 
+abbr jj \bi<CR>\item<CR>\ei<Esc>kA
 " tab completion: longest only
 set wildmode=longest,list
 " set wrap
@@ -39,7 +39,7 @@ set textwidth=80
 " F5 - Run the Perl compiler on the current file
 " F6 - List all Perl compiler errors
 " F7 - Previous Perl compiler error
-" F8 - Next Perl compiler error 
+" F8 - Next Perl compiler error
 "
 " (F9 and above are used by OS X to control various interface elements, namely
 " Expose' and Dashboard).
@@ -65,7 +65,7 @@ set textwidth=80
 " --e - Insert email address
 " --w - Insert work email address
 " --r - Insert revision tag
-" 
+"
 " Most of this was shamelessly stolen from rjbs.  Extra help from David Hand.
 "
 " Plugins used:
@@ -125,7 +125,7 @@ set undolevels=1000      " LOTS of undo history
 set wildignore+=*/CVS/   " don't try to descend into CVS directories
 set wildignore+=*/SVN/   " don't try to descend into SVN directories
 set wildmenu             " enable menu of completions
-" set wildmode=longest:full,full 
+" set wildmode=longest:full,full
                          " complete only as much as is common,
                          " then show menu
 set writeany             " avoid constant ! to overwrite. . .
@@ -203,7 +203,7 @@ function ModifiedFlag()
     endif
 endfunc
 
-set statusline=[%n]\ %{ModifiedFlag()}%f\ %=%h%r%w\ (%l,%v)\ %P\ 
+set statusline=[%n]\ %{ModifiedFlag()}%f\ %=%h%r%w\ (%l,%v)\ %P\
 
 "
 " Perl code folding options
@@ -212,14 +212,14 @@ set statusline=[%n]\ %{ModifiedFlag()}%f\ %=%h%r%w\ (%l,%v)\ %P\
 " let perl_include_pod=1
 
 "
-" Because I don't like to type much. . . 
+" Because I don't like to type much. . .
 "
 iabbr --r -- Jason, <C-R>=strftime("%Y-%m-%d")<CR>
 iabbr --n Jason A. Crome
 iabbr --e cromedome@cpan.org
 iabbr --w crome@devnetinc.com
 
-" 
+"
 " Version 7 things
 "
 if v:version >= 700
@@ -285,7 +285,7 @@ set tags+=tags;
 " for related files in the same directory - and so that :n .<Enter>
 " does what's expected. It also allows the recursive tag searching
 " (just mentioned above) to work properly if you edit multiple
-" projects - just put the tags file at the top of each project. 
+" projects - just put the tags file at the top of each project.
 " autocmd BufEnter * lcd %:p:h
 
 " perldoc settings
@@ -320,7 +320,7 @@ cscope add cscope.out
 " NERD_tree
 " Press '\n' to toggle NERDTree
 let mapleader = "\\"
-map <Leader>n :NERDTreeToggle<CR> 
+map <Leader>n :NERDTreeToggle<CR>
 
 " use solarized.vim color scheme
 " set background=dark
