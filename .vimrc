@@ -273,7 +273,7 @@ let Tlist_Close_On_Select=0
 let Tlist_Enable_Fold_Column=0
 let TList_WinWidth=50
 map <F4> :TlistToggle<CR>
-map <silent> ,tl :TlistToggle<CR>
+nnoremap <leader>l :TlistToggle<CR>
 " added by jduan
 " If you have multiple tag files (across different projects), or your
 " current working directory changes, it is useful to have vim search
