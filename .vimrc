@@ -345,7 +345,7 @@ autocmd BufReadPost *
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
 " auto remove trailing spaces upon save
-autocmd BufWritePre * :%s/\s\+$//e
+" autocmd BufWritePre * :%s/\s\+$//e
 
 " rainbow parentheses
 au VimEnter * RainbowParenthesesToggle
