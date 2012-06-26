@@ -7,8 +7,9 @@ require "fileutils"
 
 EXCLUDE_LIST = [ ".", "..", ".git" ]
 
-target_dir = Dir.home + "/vimfiles/"
-src_dir = Dir.home + "/"
+HOME = ENV['HOME']
+target_dir = HOME + "/vimfiles/"
+src_dir = HOME + "/"
 Dir.chdir(target_dir)
 Dir.glob('.*').each do |file|
   unless EXCLUDE_LIST.include? file
