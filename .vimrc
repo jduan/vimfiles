@@ -330,7 +330,7 @@ map <Leader>n :NERDTreeToggle<CR>
 :imap ;; <Esc>
 
 " turn on cursor line
-set cursorline
+" set cursorline
 
 " bufferexplorer: use relative path
 let g:bufExplorerShowRelativePath=1
