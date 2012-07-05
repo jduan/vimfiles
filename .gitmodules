@@ -79,3 +79,6 @@
 [submodule ".vim/bundle/NrrwRgn"]
 	path = .vim/bundle/NrrwRgn
 	url = https://github.com/chrisbra/NrrwRgn.git
+[submodule ".vim/bundle/csapprox"]
+	path = .vim/bundle/csapprox
+	url = https://github.com/godlygeek/csapprox.git
