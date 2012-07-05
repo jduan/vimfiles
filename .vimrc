@@ -130,7 +130,7 @@ set wildmenu             " enable menu of completions
                          " then show menu
 set writeany             " avoid constant ! to overwrite. . .
 
-colorscheme default    " use my phat color scheme
+colorscheme railscasts   " use railscasts color scheme
 filetype plugin on       " use ftplugins, mostly for those in ~
 filetype on
 syntax on                " enable syntax highlighting
