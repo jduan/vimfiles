@@ -318,6 +318,8 @@ compiler ruby         " Enable compiler support for ruby
 cscope add cscope.out
 
 " NERD_tree
+" show list on the right side
+let g:NERDTreeWinPos = "right"
 " Press '\n' to toggle NERDTree
 let mapleader = "\\"
 map <Leader>n :NERDTreeToggle<CR>
