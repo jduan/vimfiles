@@ -319,7 +319,7 @@ cscope add cscope.out
 
 " NERD_tree
 " show list on the right side
-let g:NERDTreeWinPos = "right"
+" let g:NERDTreeWinPos = "right"
 " Press '\n' to toggle NERDTree
 let mapleader = "\\"
 map <Leader>n :NERDTreeToggle<CR>
