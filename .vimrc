@@ -317,11 +317,14 @@ compiler ruby         " Enable compiler support for ruby
 " load cscope
 cscope add cscope.out
 
+let mapleader = ","
+nnoremap <leader>a :Ack\ 
+nnoremap <leader>q gqip "format paragraph
+
 " NERD_tree
 " show list on the right side
 " let g:NERDTreeWinPos = "right"
 " Press '\n' to toggle NERDTree
-let mapleader = "\\"
 map <Leader>n :NERDTreeToggle<CR>
 " close vim when the only window left is NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
