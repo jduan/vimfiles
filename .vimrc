@@ -318,8 +318,8 @@ compiler ruby         " Enable compiler support for ruby
 cscope add cscope.out
 
 let mapleader = ","
-nnoremap <leader>a :Ack\ 
-nnoremap <leader>q gqip "format paragraph
+nnoremap <leader>a :Ack
+nnoremap <leader>q gqip
 
 " NERD_tree
 " show list on the right side
