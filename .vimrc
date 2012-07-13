@@ -239,7 +239,10 @@ let perl_synwrite_qf = ! v:shell_error   " use Vi::QuickFix if it can be used
 autocmd BufNewFile,BufRead *.p? compiler perl
 autocmd BufNewFile,BufRead *.t  compiler perl
 
+" ctrlp
 map <F5> :CtrlPClearAllCaches<CR>
+let g:ctrlp_mruf_exclude = '/tmp/.*\|*build*'
+
 " map <F6> :clist<CR>
 " map <F7> :cprevious<CR>
 " map <F8> :cnext<CR>
