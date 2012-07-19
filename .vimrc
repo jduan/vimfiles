@@ -242,6 +242,7 @@ autocmd BufNewFile,BufRead *.t  compiler perl
 " ctrlp
 map <F5> :CtrlPClearAllCaches<CR>
 let g:ctrlp_mruf_exclude = '/tmp/.*\|*build*'
+" let g:ctrlp_cmd = 'CtrlPMixed'
 
 " map <F6> :clist<CR>
 " map <F7> :cprevious<CR>
@@ -322,6 +323,10 @@ cscope add cscope.out
 
 let mapleader = ","
 nnoremap <leader>a :Ack
+nnoremap <leader>g :Git
+nnoremap <leader>gs :Gstatus
+nnoremap <leader>t :Tabularize /
+vnoremap <leader>t :Tabularize /
 nnoremap <leader>q gqip
 
 " NERD_tree
@@ -337,10 +342,10 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 " colorscheme solarized
 
 " Press ;; to exit insert mode
-:imap ;; <Esc>
+:imap ii <Esc>
 
 " turn on cursor line
-" set cursorline
+set cursorline
 
 " bufferexplorer: use relative path
 let g:bufExplorerShowRelativePath=1
@@ -380,3 +385,12 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
+
+" easy window navigation
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+" use w! save with sudo
+cmap w! w !sudo tee % >/dev/null
