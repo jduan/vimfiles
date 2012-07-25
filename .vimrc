@@ -1,6 +1,15 @@
 " vim-pathogen
 call pathogen#infect()
 
+let mapleader = ","
+" Ack the word under cursor
+nnoremap <leader>a :Ack <cword><CR>
+nnoremap <leader>g :Git
+nnoremap <leader>gs :Gstatus
+nnoremap <leader>t :Tabularize /
+vnoremap <leader>t :Tabularize /
+nnoremap <leader>q gqip
+
 " p4 commands
 nnoremap @p4a :!p4 add %
 " nnoremap @p4e :!p4 edit %
@@ -320,14 +329,6 @@ compiler ruby         " Enable compiler support for ruby
 
 " load cscope
 cscope add cscope.out
-
-let mapleader = ","
-nnoremap <leader>a :Ack
-nnoremap <leader>g :Git
-nnoremap <leader>gs :Gstatus
-nnoremap <leader>t :Tabularize /
-vnoremap <leader>t :Tabularize /
-nnoremap <leader>q gqip
 
 " NERD_tree
 " show list on the right side
