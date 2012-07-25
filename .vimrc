@@ -212,8 +212,6 @@ function ModifiedFlag()
     endif
 endfunc
 
-set statusline=[%n]\ %{ModifiedFlag()}%f\ %=%h%r%w\ (%l,%v)\ %P\
-
 "
 " Perl code folding options
 "
