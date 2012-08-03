@@ -248,8 +248,13 @@ autocmd BufNewFile,BufRead *.t  compiler perl
 
 " ctrlp
 map <F5> :CtrlPClearAllCaches<CR>
-let g:ctrlp_mruf_exclude = '/tmp/.*\|*build*'
-" let g:ctrlp_cmd = 'CtrlPMixed'
+let g:ctrlp_cmd = 'CtrlPMixed'
+" let g:ctrlp_mruf_exclude = '/tmp/.*\|*build*'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  'build$\|\.git$\|\.hg$\|\.svn$',
+  \ 'file': '\.exe$\|\.so$\|\.dll$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
 
 " map <F6> :clist<CR>
 " map <F7> :cprevious<CR>
