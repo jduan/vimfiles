@@ -31,7 +31,7 @@ set cindent
 set statusline=%<[%02n]\ %F%(\ %m%h%w%y%r%)\ %a%=\ %8l,%c%V/%L\ (%P)\ [%08O:%02B]
 set laststatus=2
 " map F10 to add a new word entry
-abbr jj \bi<CR>\item<CR>\ei<Esc>kA
+imap jj \bi<CR>\item<CR>\ei<Esc>kA
 " tab completion: longest only
 set wildmode=longest,list
 " set wrap
@@ -251,7 +251,7 @@ map <F5> :CtrlPClearAllCaches<CR>
 let g:ctrlp_cmd = 'CtrlPMixed'
 " let g:ctrlp_mruf_exclude = '/tmp/.*\|*build*'
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  'build$\|\.git$\|\.hg$\|\.svn$',
+  \ 'dir':  'build$\|coverage$\|\.git$\|\.hg$\|\.svn$',
   \ 'file': '\.exe$\|\.so$\|\.dll$',
   \ 'link': 'some_bad_symbolic_links',
   \ }
