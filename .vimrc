@@ -35,7 +35,7 @@ imap jj \bi<CR>\item<CR>\ei<Esc>kA
 " tab completion: longest only
 set wildmode=longest,list
 " set wrap
-set textwidth=70
+set textwidth=72
 
 "
 " To make my own life easier, here's the list of keymappings provided by my
@@ -251,7 +251,7 @@ map <F5> :CtrlPClearAllCaches<CR>
 let g:ctrlp_cmd = 'CtrlPMixed'
 " let g:ctrlp_mruf_exclude = '/tmp/.*\|*build*'
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  'build$\|coverage$\|\.git$\|\.hg$\|\.svn$',
+  \ 'dir':  'build$\|coverage$\|\.swp$\|\.git$\|\.hg$\|\.svn$',
   \ 'file': '\.exe$\|\.so$\|\.dll$',
   \ 'link': 'some_bad_symbolic_links',
   \ }
