@@ -3,7 +3,8 @@ call pathogen#infect()
 
 let mapleader = ","
 " Ack the word under cursor
-nnoremap <leader>a :Ack <cword><CR>
+nnoremap <leader>a :Ack --ignore-dir coverage <cword><CR>
+  \ 'dir':  'build$\|coverage$\|\.pyc$\|\.swp$\|\.git$\|\.hg$\|\.svn$',
 nnoremap <leader>g :Git
 nnoremap <leader>gs :Gstatus
 nnoremap <leader>t :Tabularize /
@@ -30,12 +31,15 @@ syntax on
 set cindent
 set statusline=%<[%02n]\ %F%(\ %m%h%w%y%r%)\ %a%=\ %8l,%c%V/%L\ (%P)\ [%08O:%02B]
 set laststatus=2
-" map F10 to add a new word entry
+" mappings
 imap jj \bi<CR>\item<CR>\ei<Esc>kA
+nmap oo o<Esc>k
+nmap OO O<Esc>j
+
 " tab completion: longest only
 set wildmode=longest,list
 " set wrap
-set textwidth=72
+set textwidth=80
 
 "
 " To make my own life easier, here's the list of keymappings provided by my
@@ -251,7 +255,7 @@ map <F5> :CtrlPClearAllCaches<CR>
 let g:ctrlp_cmd = 'CtrlPMixed'
 " let g:ctrlp_mruf_exclude = '/tmp/.*\|*build*'
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  'build$\|coverage$\|\.swp$\|\.git$\|\.hg$\|\.svn$',
+  \ 'dir':  'build$\|coverage$\|\.pyc$\|\.swp$\|\.git$\|\.hg$\|\.svn$',
   \ 'file': '\.exe$\|\.so$\|\.dll$',
   \ 'link': 'some_bad_symbolic_links',
   \ }
