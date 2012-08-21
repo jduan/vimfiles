@@ -133,6 +133,7 @@ set tabstop=4            " The One True Tab (as of latest revision)
 set shiftwidth=4         " affects what happens when you press >>, << etc
 set terse
 set timeout              " allow keys to timeout
+set timeoutlen=500       " millisecs, time out between 2 keystrokes
 set title                " do set the xterm title (see 'titleold', set below)
 set undolevels=1000      " LOTS of undo history
 set wildignore+=*/CVS/   " don't try to descend into CVS directories
