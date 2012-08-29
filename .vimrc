@@ -24,7 +24,8 @@ map <F6> :!p4 revert %<cr>
 " Other command mappings
 map <C-p> :pwd<cr>
 
-set ignorecase " set ic
+" make searches case-sensitive only if they contain upper-case letters
+set ignorecase smartcase
 set incsearch
 " set hlsearch " highlight all matches for the pattern
 syntax on
@@ -115,7 +116,6 @@ set formatprg=par        " use 'par' to format text with 'gq'
 set guioptions+=agimrLt  " make vim act like a gui when started like one
 set hidden               " hide, don't close, undisplayed buffers
 set history=50           " keep 50 lines of command history
-set laststatus=2         " always show status line
 set more                 " page on extended output
 set novb                 " disable visual bell
 set nowrap               " don't automatically wrap lines
