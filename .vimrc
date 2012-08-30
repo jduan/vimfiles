@@ -6,7 +6,7 @@ let mapleader = ","
 nnoremap <leader>a :Ack --ignore-dir coverage <cword><CR>
   \ 'dir':  'build$\|coverage$\|\.pyc$\|\.swp$\|\.git$\|\.hg$\|\.svn$',
 nnoremap <leader>g :Git
-nnoremap <leader>gs :Gstatus
+nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>t :Tabularize /
 vnoremap <leader>t :Tabularize /
 nnoremap <leader>q gqip
@@ -30,7 +30,7 @@ set incsearch
 " set hlsearch " highlight all matches for the pattern
 syntax on
 set cindent
-set statusline=%<[%02n]\ %F%(\ %m%h%w%y%r%)\ %a%=\ %8l,%c%V/%L\ (%P)\ [%08O:%02B]
+set statusline=%<[%02n]\ %F%(\ %m%h%w%y%r%)\ %{fugitive#statusline()}\ %a%=\ %8l,%c%V/%L\ (%P)\ [%08O:%02B]
 set laststatus=2
 " mappings
 imap jj \bi<CR>\item<CR>\ei<Esc>kA
