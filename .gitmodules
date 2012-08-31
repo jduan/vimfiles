@@ -103,3 +103,6 @@
 [submodule ".vim/bundle/capslock.vim"]
 	path = .vim/bundle/capslock.vim
 	url = https://github.com/vim-scripts/capslock.vim.git
+[submodule ".vim/bundle/vim-rake"]
+	path = .vim/bundle/vim-rake
+	url = https://github.com/tpope/vim-rake.git
