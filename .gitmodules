@@ -100,3 +100,6 @@
 [submodule ".vim/bundle/vim-textobj-rubyblock"]
 	path = .vim/bundle/vim-textobj-rubyblock
 	url = https://github.com/nelstrom/vim-textobj-rubyblock.git
+[submodule ".vim/bundle/capslock.vim"]
+	path = .vim/bundle/capslock.vim
+	url = https://github.com/vim-scripts/capslock.vim.git

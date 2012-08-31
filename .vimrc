@@ -403,3 +403,7 @@ map <C-l> <C-w>l
 
 " use w! save with sudo
 cmap w! w !sudo tee % >/dev/null
+
+" capslock.vim: turn caps on and off
+" default behavior is to disable caps lock when leaving insert mode
+imap <leader>c <Plug>CapsLockToggle
