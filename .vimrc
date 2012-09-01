@@ -5,8 +5,14 @@ let mapleader = ","
 " Ack the word under cursor
 nnoremap <leader>a :Ack --ignore-dir coverage <cword><CR>
   \ 'dir':  'build$\|coverage$\|\.pyc$\|\.swp$\|\.git$\|\.hg$\|\.svn$',
+" git shortcuts
 nnoremap <leader>g :Git
 nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gb :Gblame<CR>
+nnoremap <leader>gd :Gdiff<CR>
+nnoremap <leader>gl :Glog<CR>
+nnoremap <leader>gp :Gpush<CR>
+nnoremap <leader>gc :Gcommit
 nnoremap <leader>t :Tabularize /
 vnoremap <leader>t :Tabularize /
 nnoremap <leader>q gqip
@@ -256,8 +262,8 @@ map <F5> :CtrlPClearAllCaches<CR>
 let g:ctrlp_cmd = 'CtrlPMixed'
 " let g:ctrlp_mruf_exclude = '/tmp/.*\|*build*'
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  'build$\|coverage$\|\.pyc$\|\.swp$\|\.git$\|\.hg$\|\.svn$',
-  \ 'file': '\.exe$\|\.so$\|\.dll$',
+  \ 'dir':  'build$\|coverage$\|\.swp$\|\.git$\|\.hg$\|\.svn$',
+  \ 'file': '\.exe$\|\.pyc$|\.so$\|\.dll$',
   \ 'link': 'some_bad_symbolic_links',
   \ }
 
