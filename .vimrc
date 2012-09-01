@@ -3,7 +3,7 @@ call pathogen#infect()
 
 let mapleader = ","
 " Ack the word under cursor
-nnoremap <leader>a :Ack --ignore-dir coverage <cword><CR>
+nnoremap <leader>a :Ack! --ignore-dir coverage <cword><CR>
   \ 'dir':  'build$\|coverage$\|\.pyc$\|\.swp$\|\.git$\|\.hg$\|\.svn$',
 " git shortcuts "fugitive plugin"
 nnoremap <leader>g :Git
@@ -18,6 +18,11 @@ vnoremap <leader>t :Tabularize /
 nnoremap <leader>q gqip
 " gundo plugin
 nnoremap <leader>gu :GundoToggle<CR>
+" make file read only
+nnoremap <leader>ro :set nomodifiable<CR>
+nnoremap <leader>rw :set modifiable<CR>
+" open up a shell inside vim
+nnoremap <leader>sh :ConqueTerm zsh<CR>
 
 " p4 commands
 nnoremap @p4a :!p4 add %
@@ -141,7 +146,7 @@ set tabstop=4            " The One True Tab (as of latest revision)
 set shiftwidth=4         " affects what happens when you press >>, << etc
 set terse
 set timeout              " allow keys to timeout
-set timeoutlen=500       " millisecs, time out between 2 keystrokes
+set timeoutlen=1000      " millisecs, time out between 2 keystrokes
 set title                " do set the xterm title (see 'titleold', set below)
 set undolevels=1000      " LOTS of undo history
 set wildignore+=*/CVS/   " don't try to descend into CVS directories
