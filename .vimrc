@@ -11,7 +11,7 @@ nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gb :Gblame<CR>
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gl :Glog<CR>
-nnoremap <leader>gp :Gpush<CR>
+nnoremap <leader>gp :Git push<CR>
 nnoremap <leader>gc :Gcommit
 nnoremap <leader>t :Tabularize /
 vnoremap <leader>t :Tabularize /
