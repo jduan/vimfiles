@@ -5,7 +5,7 @@ let mapleader = ","
 " Ack the word under cursor
 nnoremap <leader>a :Ack --ignore-dir coverage <cword><CR>
   \ 'dir':  'build$\|coverage$\|\.pyc$\|\.swp$\|\.git$\|\.hg$\|\.svn$',
-" git shortcuts
+" git shortcuts "fugitive plugin"
 nnoremap <leader>g :Git
 nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gb :Gblame<CR>
@@ -16,6 +16,8 @@ nnoremap <leader>gc :Gcommit
 nnoremap <leader>t :Tabularize /
 vnoremap <leader>t :Tabularize /
 nnoremap <leader>q gqip
+" gundo plugin
+nnoremap <leader>gu :GundoToggle<CR>
 
 " p4 commands
 nnoremap @p4a :!p4 add %
