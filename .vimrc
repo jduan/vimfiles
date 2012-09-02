@@ -307,7 +307,7 @@ let Tlist_Close_On_Select=0
 let Tlist_Enable_Fold_Column=0
 let TList_WinWidth=50
 map <F4> :TlistToggle<CR>
-nnoremap <leader>l :TlistToggle<CR>
+nnoremap <leader>tl :TlistToggle<CR>
 " added by jduan
 " If you have multiple tag files (across different projects), or your
 " current working directory changes, it is useful to have vim search
@@ -420,6 +420,8 @@ cmap w! w !sudo tee % >/dev/null
 " capslock.vim: turn caps on and off
 " default behavior is to disable caps lock when leaving insert mode
 imap <leader>c <Plug>CapsLockToggle
+
+" coffeetags for coffeescript
 if executable('coffeetags')
   let g:tagbar_type_coffee = {
         \ 'ctagsbin' : 'coffeetags',
@@ -435,3 +437,6 @@ if executable('coffeetags')
         \ }
         \ }
 endif
+
+" tagbar
+nnoremap <leader>tb :TagbarToggle<CR>
