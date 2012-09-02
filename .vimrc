@@ -420,3 +420,18 @@ cmap w! w !sudo tee % >/dev/null
 " capslock.vim: turn caps on and off
 " default behavior is to disable caps lock when leaving insert mode
 imap <leader>c <Plug>CapsLockToggle
+if executable('coffeetags')
+  let g:tagbar_type_coffee = {
+        \ 'ctagsbin' : 'coffeetags',
+        \ 'ctagsargs' : '',
+        \ 'kinds' : [
+        \ 'f:functions',
+        \ 'o:object',
+        \ ],
+        \ 'sro' : ".",
+        \ 'kind2scope' : {
+        \ 'f' : 'object',
+        \ 'o' : 'object',
+        \ }
+        \ }
+endif
