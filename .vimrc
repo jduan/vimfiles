@@ -47,8 +47,6 @@ set statusline=%<[%02n]\ %F%(\ %m%h%w%y%r%)\ %{fugitive#statusline()}\ %a%=\ %8l
 set laststatus=2
 " mappings
 imap jj \bi<CR>\item<CR>\ei<Esc>kA
-nmap oo o<Esc>k
-nmap OO O<Esc>j
 
 " tab completion: longest only
 set wildmode=longest,list
@@ -440,3 +438,6 @@ endif
 
 " tagbar
 nnoremap <leader>tb :TagbarToggle<CR>
+
+" saveas to the path of the current file
+command! -nargs=1 SaveasSamePath exe "sav " . expand("%:p:h") . "/" .  expand("<args>")
