@@ -127,3 +127,6 @@
 [submodule ".vim/bundle/VisIncr"]
 	path = .vim/bundle/VisIncr
 	url = git://github.com/vim-scripts/VisIncr.git
+[submodule ".vim/bundle/vim-abolish"]
+	path = .vim/bundle/vim-abolish
+	url = git://github.com/tpope/vim-abolish.git
