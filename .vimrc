@@ -441,3 +441,11 @@ nnoremap <leader>tb :TagbarToggle<CR>
 
 " saveas to the path of the current file
 command! -nargs=1 SaveasSamePath exe "sav " . expand("%:p:h") . "/" .  expand("<args>")
+
+" clear screen before running a command
+map :! :!clear;
+
+" switch to previous window in insert mode
+inoremap <C-^> <Esc><C-^>
+
+" "
