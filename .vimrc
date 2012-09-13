@@ -448,4 +448,11 @@ map :! :!clear;
 " switch to previous window in insert mode
 inoremap <C-^> <Esc><C-^>
 
-" "
+"Here is an example that can be added to your .vimrc which will setup the
+"supertab chaining for any filetype that has a provided |omnifunc| to
+"first try that, then fall back to supertab's default, <c-p>, completion:
+  autocmd FileType *
+    \ if &omnifunc != '' |
+    \   call SuperTabChain(&omnifunc, "<c-p>") |
+    \   call SuperTabSetDefaultCompletionType("<c-x><c-u>") |
+    \ endif
