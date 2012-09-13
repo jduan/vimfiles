@@ -447,6 +447,8 @@ map :! :!clear;
 
 " switch to previous window in insert mode
 inoremap <C-^> <Esc><C-^>
+" in command mode, double leader to go to previous file
+nnoremap <leader><leader> <c-^>
 
 "Here is an example that can be added to your .vimrc which will setup the
 "supertab chaining for any filetype that has a provided |omnifunc| to
