@@ -16,6 +16,7 @@ nnoremap <leader>gc :Gcommit
 nnoremap <leader>t :Tabularize /
 vnoremap <leader>t :Tabularize /
 nnoremap <leader>q gqip
+nnoremap <leader>eb :EasyBuffer<CR>
 " gundo plugin
 nnoremap <leader>gu :GundoToggle<CR>
 " make file read only
