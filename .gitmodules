@@ -133,3 +133,6 @@
 [submodule ".vim/bundle/simple_bookmarks"]
 	path = .vim/bundle/simple_bookmarks
 	url = git://github.com/AndrewRadev/simple_bookmarks.vim.git
+[submodule ".vim/bundle/xmledit"]
+	path = .vim/bundle/xmledit
+	url = git@github.com:jduan/xmledit.git
