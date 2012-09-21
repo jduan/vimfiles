@@ -151,3 +151,6 @@
 [submodule ".vim/bundle/easybuffer.vim"]
 	path = .vim/bundle/easybuffer.vim
 	url = https://github.com/troydm/easybuffer.vim
+[submodule ".vim/bundle/jacinto.vim"]
+	path = .vim/bundle/jacinto.vim
+	url = https://github.com/alfredodeza/jacinto.vim.git
