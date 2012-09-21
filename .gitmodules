@@ -139,3 +139,6 @@
 [submodule ".vim/bundle/vim-pastie"]
 	path = .vim/bundle/vim-pastie
 	url = https://github.com/tpope/vim-pastie.git
+[submodule ".vim/bundle/vim-visualstar"]
+	path = .vim/bundle/vim-visualstar
+	url = https://github.com/thinca/vim-visualstar.git
