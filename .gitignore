@@ -19,3 +19,6 @@ doc/
 
 # vim
 .netrwhist
+
+# sessionman plugin
+.vim/sessions/
