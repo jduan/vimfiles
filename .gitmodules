@@ -136,3 +136,6 @@
 [submodule ".vim/bundle/xmledit"]
 	path = .vim/bundle/xmledit
 	url = git@github.com:jduan/xmledit.git
+[submodule ".vim/bundle/vim-pastie"]
+	path = .vim/bundle/vim-pastie
+	url = https://github.com/tpope/vim-pastie.git
