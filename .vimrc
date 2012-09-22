@@ -25,16 +25,6 @@ nnoremap <leader>rw :set modifiable<CR>
 " open up a shell inside vim
 nnoremap <leader>sh :ConqueTerm zsh<CR>
 
-" p4 commands
-nnoremap @p4a :!p4 add %
-" nnoremap @p4e :!p4 edit %
-nnoremap @p4r :!p4 revert %
-nnoremap @p4d :!p4 diff %
-map <C-n> :tn<cr>
-map <F8> :!p4 edit %<cr>
-map <F7> :!p4 diff %<cr>
-map <F6> :!p4 revert %<cr>
-
 " Other command mappings
 map <C-p> :pwd<cr>
 
@@ -242,18 +232,6 @@ iabbr --r -- Jason, <C-R>=strftime("%Y-%m-%d")<CR>
 iabbr --n Jason A. Crome
 iabbr --e cromedome@cpan.org
 iabbr --w crome@devnetinc.com
-
-"
-" Version 7 things
-"
-if v:version >= 700
-    nnoremap @ :set cursorcolumn! cursorline!<CR>
-    let loaded_matchparen = 1
-endif
-
-"
-" Plugin configuration!
-"
 
 " perl_synwrite
 silent call system("perl -e0 -MVi::QuickFix=silent")
