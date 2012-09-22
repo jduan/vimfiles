@@ -157,3 +157,6 @@
 [submodule ".vim/bundle/textobj-word-column.vim"]
 	path = .vim/bundle/textobj-word-column.vim
 	url = https://github.com/coderifous/textobj-word-column.vim.git
+[submodule ".vim/bundle/pb.vim"]
+	path = .vim/bundle/pb.vim
+	url = https://github.com/troydm/pb.vim.git
