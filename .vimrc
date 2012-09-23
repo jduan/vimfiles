@@ -1,6 +1,9 @@
 " vim-pathogen
 call pathogen#infect()
 
+" disable 'highlighting the matching paren'
+let loaded_matchparen=1
+
 let mapleader = ","
 " Ack the word under cursor
 nnoremap <leader>a :Ack! --ignore-dir coverage <cword><CR>
