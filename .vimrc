@@ -440,3 +440,14 @@ nnoremap <leader><leader> <c-^>
     \   call SuperTabChain(&omnifunc, "<c-p>") |
     \   call SuperTabSetDefaultCompletionType("<c-x><c-u>") |
     \ endif
+
+" Switch CWD to the directory of the open buffer:
+map <leader>cd :cd %:p:h<cr>:pwd<cr>
+
+" create ~/.vim_undodir if it doesn't exist yet
+silent !mkdir ~/.vim_undodir > /dev/null 2>&1
+" persistent undo
+set undodir=~/.vim_undodir
+set undofile
+set undolevels=1000 "maximum number of changes that can be undone
+set undoreload=10000 "maximum number lines to save for undo on a buffer reload
