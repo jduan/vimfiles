@@ -455,3 +455,4 @@ set undoreload=10000 "maximum number lines to save for undo on a buffer reload
 " fast save a buffer
 nmap <leader>w :w<cr>
 nmap <leader>wa :wa<cr>
+nmap <leader>ss :SaveasSamePath
