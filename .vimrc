@@ -249,8 +249,8 @@ map <F5> :CtrlPClearAllCaches<CR>
 let g:ctrlp_cmd = 'CtrlPMixed'
 " let g:ctrlp_mruf_exclude = '/tmp/.*\|*build*'
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  'build$\|coverage$\|\.swp$\|\.git$\|\.hg$\|\.svn$',
-  \ 'file': '\.class$\|\.exe$\|\.pyc$\|\.so$\|\.dll$',
+  \ 'dir':  'build$\|coverage$\|\.git$\|\.hg$\|\.svn$',
+  \ 'file': '\.class$\|\.exe$\|\.swp$\|\.pyc$\|\.so$\|\.dll$',
   \ 'link': 'some_bad_symbolic_links',
   \ }
 
