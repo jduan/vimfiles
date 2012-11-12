@@ -20,6 +20,7 @@ nnoremap <leader>t :Tabularize /
 vnoremap <leader>t :Tabularize /
 nnoremap <leader>q gqip
 nnoremap <leader>eb :EasyBuffer<CR>
+nnoremap <leader>be :BufExplorer<CR>
 " gundo plugin
 nnoremap <leader>gu :GundoToggle<CR>
 " make file read only
