@@ -457,3 +457,6 @@ set undoreload=10000 "maximum number lines to save for undo on a buffer reload
 nmap <leader>w :w<cr>
 nmap <leader>wa :wa<cr>
 nmap <leader>ss :SaveasSamePath
+
+" make 'crontab -e' work on Mac
+au FileType crontab set nobackup nowritebackup
