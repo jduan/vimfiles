@@ -36,7 +36,6 @@ map <C-p> :pwd<cr>
 set ignorecase smartcase
 set incsearch
 " set hlsearch " highlight all matches for the pattern
-syntax on
 set cindent
 set statusline=%<[%02n]\ %F%(\ %m%h%w%y%r%)\ %{fugitive#statusline()}\ %a%=\ %8l,%c%V/%L\ (%P)\ [%08O:%02B]
 set laststatus=2
@@ -151,9 +150,6 @@ set wildmenu             " enable menu of completions
 set writeany             " avoid constant ! to overwrite. . .
 
 colorscheme railscasts   " use railscasts color scheme
-filetype plugin on       " use ftplugins, mostly for those in ~
-filetype on
-syntax on                " enable syntax highlighting
 au BufNewFile,BufRead *.wsdl set filetype=xml
 
 if has("win32")
