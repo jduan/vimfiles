@@ -361,11 +361,11 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 " auto remove trailing spaces upon save
 " autocmd BufWritePre * :%s/\s\+$//e
 
-" rainbow parentheses
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
+" rainbow parentheses: this plugin conflicts with VimClojure
+"au VimEnter * RainbowParenthesesToggle
+"au Syntax * RainbowParenthesesLoadRound
+"au Syntax * RainbowParenthesesLoadSquare
+"au Syntax * RainbowParenthesesLoadBraces
 
 " vim-slime
 let g:slime_target = "tmux"

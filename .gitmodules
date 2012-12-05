@@ -58,9 +58,6 @@
 [submodule ".vim/bundle/IndexedSearch"]
 	path = .vim/bundle/IndexedSearch
 	url = https://github.com/vim-scripts/IndexedSearch.git
-[submodule ".vim/bundle/rainbow_parentheses.vim"]
-	path = .vim/bundle/rainbow_parentheses.vim
-	url = https://github.com/kien/rainbow_parentheses.vim.git
 [submodule ".vim/bundle/vim-slime"]
 	path = .vim/bundle/vim-slime
 	url = git://github.com/jpalardy/vim-slime.git
