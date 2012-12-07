@@ -456,3 +456,12 @@ nmap <leader>ss :SaveasSamePath
 
 " make 'crontab -e' work on Mac
 au FileType crontab set nobackup nowritebackup
+
+" vimclojure
+let g:vimclojure#HighlightBuiltins=1
+let g:vimclojure#ParenRainbow=1
+let g:vimclojure#DynamicHighlighting=1
+" let vimclojure#NailgunClient = "/home/babilen/bin/ng"
+" let vimclojure#WantNailgun = 1
+let vimclojure#SplitPos = "right"
+let vimclojure#FuzzyIndent = 1
