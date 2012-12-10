@@ -465,3 +465,8 @@ let g:vimclojure#DynamicHighlighting=1
 " let vimclojure#WantNailgun = 1
 let vimclojure#SplitPos = "right"
 let vimclojure#FuzzyIndent = 1
+
+" swap the current word with the next one without changing cursor position
+:nnoremap <silent> gw "_yiw:s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<CR><c-o><c-l>
+" swap the current word with the previous, keeping cursor on current word
+:nnoremap <silent> gb "_yiw?\w\+\_W\+\%#<CR>:s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<CR><c-o><c-l>
