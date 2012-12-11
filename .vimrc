@@ -35,7 +35,14 @@ map <C-p> :pwd<cr>
 " make searches case-sensitive only if they contain upper-case letters
 set ignorecase smartcase
 set incsearch
-" set hlsearch " highlight all matches for the pattern
+set hlsearch " highlight all matches for the pattern
+" Clear the search buffer when hitting return
+function! MapCR()
+  nnoremap <cr> :nohlsearch<cr>
+endfunction"
+call MapCR()
+autocmd! CmdwinEnter * :unmap <cr>
+autocmd! CmdwinLeave * :call MapCR()
 set cindent
 set statusline=%<[%02n]\ %F%(\ %m%h%w%y%r%)\ %{fugitive#statusline()}\ %a%=\ %8l,%c%V/%L\ (%P)\ [%08O:%02B]
 set laststatus=2
