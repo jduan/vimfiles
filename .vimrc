@@ -298,6 +298,9 @@ nnoremap <leader>tl :TlistToggle<CR>
 " recursively upwards for the tags file.
 " set tags=tags;/
 set tags+=tags;
+" map Ctrl-n to finding the next tag
+map <C-n> :tnext<CR>
+
 " Along those same lines, I like for vim to change directory to
 " whatever file I'm currently editing. This makes it easier to search
 " for related files in the same directory - and so that :n .<Enter>
@@ -477,3 +480,6 @@ let vimclojure#FuzzyIndent = 1
 :nnoremap <silent> gw "_yiw:s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<CR><c-o><c-l>
 " swap the current word with the previous, keeping cursor on current word
 :nnoremap <silent> gb "_yiw?\w\+\_W\+\%#<CR>:s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<CR><c-o><c-l>
+
+" disable c-n mapping for the multichange plugin
+let g:multichange_mapping = ''
