@@ -44,7 +44,7 @@ call MapCR()
 autocmd! CmdwinEnter * :unmap <cr>
 autocmd! CmdwinLeave * :call MapCR()
 set cindent
-set statusline=%<[%02n]\ %F%(\ %m%h%w%y%r%)\ %{fugitive#statusline()}\ %a%=\ %8l,%c%V/%L\ (%P)\ [%08O:%02B]
+set statusline=%<[%02n]\ %F%(\ %m%h%w%y%r%)\ %{fugitive#statusline()}\ %a%=\ [%l,%c%V](%P)\ [%08O:%02B]
 set laststatus=2
 " mappings
 imap jj \bi<CR>\item<CR>\ei<Esc>kA
