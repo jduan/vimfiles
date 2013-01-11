@@ -172,3 +172,6 @@
 [submodule ".vim/bundle/vim-rsi"]
 	path = .vim/bundle/vim-rsi
 	url = https://github.com/tpope/vim-rsi.git
+[submodule ".vim/bundle/vim-foreplay"]
+	path = .vim/bundle/vim-foreplay
+	url = https://github.com/tpope/vim-foreplay.git
