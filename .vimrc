@@ -366,7 +366,7 @@ autocmd BufReadPost *
     \ endif
 
 " <leader>W to remove all trailing white spaces
-nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+nnoremap <leader>rs :%s/\s\+$//<cr>:let @/=''<CR>
 
 " auto remove trailing spaces upon save
 " autocmd BufWritePre * :%s/\s\+$//e
@@ -428,9 +428,6 @@ endif
 " tagbar
 nnoremap <leader>tb :TagbarToggle<CR>
 
-" saveas to the path of the current file
-command! -nargs=1 SaveasSamePath exe "sav " . expand("%:p:h") . "/" .  expand("<args>")
-
 " clear screen before running a command
 map :! :!clear;
 
@@ -462,6 +459,8 @@ set undoreload=10000 "maximum number lines to save for undo on a buffer reload
 " fast save a buffer
 nmap <leader>w :w<cr>
 nmap <leader>wa :wa<cr>
+" saveas to the path of the current file
+command! -nargs=1 SaveasSamePath exe "sav " . expand("%:p:h") . "/" .  expand("<args>")
 nmap <leader>ss :SaveasSamePath
 
 " make 'crontab -e' work on Mac
