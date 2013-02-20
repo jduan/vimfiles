@@ -184,3 +184,6 @@
 [submodule ".vim/bundle/paredit.vim"]
 	path = .vim/bundle/paredit.vim
 	url = https://github.com/vim-scripts/paredit.vim.git
+[submodule ".vim/bundle/vim-seek"]
+	path = .vim/bundle/vim-seek
+	url = https://github.com/goldfeld/vim-seek.git
