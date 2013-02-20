@@ -486,3 +486,7 @@ nmap <leader>e :Eval<cr>
 
 " disable c-n mapping for the multichange plugin
 let g:multichange_mapping = ''
+
+" This lets me set a macro by first wacking qq, then q to finish, and then
+" replay it by wacking space.
+noremap <Space> @q
