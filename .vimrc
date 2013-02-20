@@ -156,6 +156,7 @@ set wildmenu             " enable menu of completions
                          " then show menu
 set writeany             " avoid constant ! to overwrite. . .
 
+set t_Co=256             " 256 colors
 colorscheme railscasts   " use railscasts color scheme
 au BufNewFile,BufRead *.wsdl set filetype=xml
 
