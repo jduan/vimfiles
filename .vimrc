@@ -493,3 +493,6 @@ noremap <Space> @q
 
 " make the gutter space cleaner
 highlight clear SignColumn
+
+" syntastic coffeelint
+let g:syntastic_coffee_coffeelint_args="--csv -f /Users/jingjing.duan/.coffeelint.json"
