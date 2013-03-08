@@ -5,7 +5,7 @@
 
 require "fileutils"
 
-EXCLUDE_LIST = [ ".", "..", ".git", ".gitmodules" ]
+EXCLUDE_LIST = [ ".", "..", ".git", ".gitignore", ".gitmodules" ]
 
 HOME = ENV['HOME']
 target_dir = HOME + "/vimfiles/"
