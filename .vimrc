@@ -345,7 +345,7 @@ cscope add cscope.out
 " Press '\n' to toggle NERDTree
 map <Leader>n :NERDTreeToggle<CR>
 " close vim when the only window left is NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " use solarized.vim color scheme
 " set background=dark
