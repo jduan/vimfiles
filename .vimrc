@@ -501,3 +501,9 @@ let g:syntastic_javascript_jslint_conf = "--sloppy --vars"
 
 " scala format
 au BufEnter *.scala setl formatprg=java\ -jar\ ~/scripts/scalariform.jar\ --stdin\ --stdout
+
+" EasyMotion
+"hi link EasyMotionTarget ErrorMsg
+"hi link EasyMotionShade  Comment
+hi EasyMotionTarget ctermbg=none ctermfg=red
+hi EasyMotionShade  ctermbg=none ctermfg=blue
