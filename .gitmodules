@@ -193,3 +193,6 @@
 [submodule ".vim/bundle/vim-expand-region"]
 	path = .vim/bundle/vim-expand-region
 	url = https://github.com/terryma/vim-expand-region.git
+[submodule ".vim/bundle/scala.vim"]
+	path = .vim/bundle/scala.vim
+	url = git://github.com/jergason/scala.vim.git
