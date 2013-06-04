@@ -496,8 +496,8 @@ highlight clear SignColumn
 
 " syntastic coffeelint
 let g:syntastic_coffee_coffeelint_args="--csv -f /Users/jingjing.duan/.coffeelint.json"
-let g:syntastic_javascript_checkers = ['jslint']
-let g:syntastic_javascript_jslint_conf = "--sloppy --vars"
+let g:syntastic_javascript_checkers = ['jshint']
+" let g:syntastic_javascript_jslint_conf = "--sloppy --vars"
 
 " scala format
 au BufEnter *.scala setl formatprg=java\ -jar\ ~/scripts/scalariform.jar\ --stdin\ --stdout
