@@ -27,6 +27,8 @@ nnoremap <leader>gc :Gcommit
 " gundo plugin
 nnoremap <leader>gu :GundoToggle<CR>
 map <Leader>n :NERDTreeToggle<CR>
+map <leader>p :set paste<CR>
+map <leader>pp :set nopaste<CR>
 nnoremap <leader>q gqip
 nnoremap <leader>t :Tabularize /
 vnoremap <leader>t :Tabularize /
