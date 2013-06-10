@@ -49,65 +49,6 @@ set laststatus=2
 " mappings
 imap jj \bi<CR>\item<CR>\ei<Esc>kA
 
-" tab completion: longest only
-set wildmode=longest,list
-" set wrap
-set textwidth=80
-
-"
-" To make my own life easier, here's the list of keymappings provided by my
-" setup:
-"
-" F1 - Previous file in buffer list
-" F2 - Next file in buffer list
-" F3 - Perldoc on the selected module
-" F4 - Perldoc on the selected function
-" F5 - Run the Perl compiler on the current file
-" F6 - List all Perl compiler errors
-" F7 - Previous Perl compiler error
-" F8 - Next Perl compiler error
-"
-" (F9 and above are used by OS X to control various interface elements, namely
-" Expose' and Dashboard).
-"
-" (these don't work in Terminal, and right now, I don't care why)
-" Shift-F1   - Toggles paste mode
-" Shift-F2   - Toggles the project browser
-" Shift-F3   - Toggles the tabbed explorer bar
-" Shift-F4   - Toggles the taglist (using ctags)
-" Control-F1 - Run perltidy on the currently edited file or selection
-"
-" (these do work in Terminal though...)
-" ,pb - Toggles the project browser
-" ,tb - Toggles the tabbed explorer bar
-" ,tl - Toggles the taglist (using ctags)
-" ,pt - Run Perltidy on the currently edited file or selection
-"
-" Other useful commands:
-" Control-A-# - Switch to buffer #
-" Control-C - Comment selected lines
-" Control-X - Uncomment selected lines
-" --n - Insert name
-" --e - Insert email address
-" --w - Insert work email address
-" --r - Insert revision tag
-"
-" Most of this was shamelessly stolen from rjbs.  Extra help from David Hand.
-"
-" Plugins used:
-" - comments.vim (block commenting made easy)
-" - minbufexpl (for a tab-like interface to buffers)
-" - perl.vim (another interface to the Perl compiler)
-" - perlhelp (Perldoc interface)
-" - perl_synwrite (syntax-checks Perl before saving - use :W)
-" - project (provides a project/tree explorer)
-" - screen.vim (for screen-like buffer bindings)
-" - taglist.vim (provides selectable list of subs using ctags)
-"
-
-"
-" Set vim options
-"
 set autoindent           " carry over indenting from previous line
 set backspace=2          " allow backspace beyond insertion point
 set background=dark      " console bg is dark
@@ -154,6 +95,10 @@ set wildmenu             " enable menu of completions
 " set wildmode=longest:full,full
                          " complete only as much as is common,
                          " then show menu
+" tab completion: longest only
+set wildmode=longest,list
+" set wrap
+set textwidth=80
 set writeany             " avoid constant ! to overwrite. . .
 
 set t_Co=256             " 256 colors
