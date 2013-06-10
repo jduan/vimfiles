@@ -193,3 +193,6 @@
 [submodule ".vim/bundle/scala.vim"]
 	path = .vim/bundle/scala.vim
 	url = git://github.com/jergason/scala.vim.git
+[submodule ".vim/bundle/vim-shootingstar"]
+	path = .vim/bundle/vim-shootingstar
+	url = git://github.com/jceb/vim-shootingstar.git
