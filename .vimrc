@@ -8,7 +8,15 @@ let mapleader = ","
 " Ack the word under cursor
 nnoremap <leader>a :Ack! --ignore-dir coverage <cword><CR>
   \ 'dir':  'build$\|coverage$\|\.pyc$\|\.swp$\|\.git$\|\.hg$\|\.svn$',
-" git shortcuts "fugitive plugin"
+nnoremap <leader>be :BufExplorer<CR>
+" capslock.vim: turn caps on and off
+" default behavior is to disable caps lock when leaving insert mode
+imap <leader>c <Plug>CapsLockToggle
+" Switch CWD to the directory of the open buffer:
+map <leader>cd :cd %:p:h<cr>:pwd<cr>
+" foreplay.vim
+nmap <leader>e :Eval<cr>
+nnoremap <leader>eb :EasyBuffer<CR>
 nnoremap <leader>g :Git
 nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gb :Gblame<CR>
@@ -16,18 +24,32 @@ nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gl :Glog<CR>
 nnoremap <leader>gp :Git push<CR>
 nnoremap <leader>gc :Gcommit
-nnoremap <leader>t :Tabularize /
-vnoremap <leader>t :Tabularize /
-nnoremap <leader>q gqip
-nnoremap <leader>eb :EasyBuffer<CR>
-nnoremap <leader>be :BufExplorer<CR>
 " gundo plugin
 nnoremap <leader>gu :GundoToggle<CR>
+map <Leader>n :NERDTreeToggle<CR>
+nnoremap <leader>q gqip
+nnoremap <leader>t :Tabularize /
+vnoremap <leader>t :Tabularize /
 " make file read only
 nnoremap <leader>ro :set nomodifiable<CR>
+" <leader>W to remove all trailing white spaces
+nnoremap <leader>rs :%s/\s\+$//<cr>:let @/=''<CR>
 nnoremap <leader>rw :set modifiable<CR>
 " open up a shell inside vim
 nnoremap <leader>sh :ConqueTerm zsh<CR>
+" saveas to the path of the current file
+command! -nargs=1 SaveasSamePath exe "sav " . expand("%:p:h") . "/" .  expand("<args>")
+nmap <leader>ss :SaveasSamePath
+nnoremap <leader>tl :TlistToggle<CR>
+" tagbar
+nnoremap <leader>tb :TagbarToggle<CR>
+" in command mode, double leader to go to previous file
+nnoremap <leader><leader> <c-^>
+" fast save a buffer
+nmap <leader>w :w<cr>
+nmap <leader>wa :wa<cr>
+
+
 
 " Other command mappings
 map <C-p> :pwd<cr>
@@ -237,7 +259,6 @@ let Tlist_Close_On_Select=0
 let Tlist_Enable_Fold_Column=0
 let TList_WinWidth=50
 map <F4> :TlistToggle<CR>
-nnoremap <leader>tl :TlistToggle<CR>
 " added by jduan
 " If you have multiple tag files (across different projects), or your
 " current working directory changes, it is useful to have vim search
@@ -288,7 +309,6 @@ cscope add cscope.out
 " show list on the right side
 " let g:NERDTreeWinPos = "right"
 " Press '\n' to toggle NERDTree
-map <Leader>n :NERDTreeToggle<CR>
 " close vim when the only window left is NERDTree
 " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
@@ -310,9 +330,6 @@ autocmd BufReadPost *
     \ if line("'\"") > 1 && line("'\"") <= line("$") |
     \   exe "normal! g`\"" |
     \ endif
-
-" <leader>W to remove all trailing white spaces
-nnoremap <leader>rs :%s/\s\+$//<cr>:let @/=''<CR>
 
 " auto remove trailing spaces upon save
 " autocmd BufWritePre * :%s/\s\+$//e
@@ -350,10 +367,6 @@ map <C-l> <C-w>l
 " use w! save with sudo
 cmap w! w !sudo tee % >/dev/null
 
-" capslock.vim: turn caps on and off
-" default behavior is to disable caps lock when leaving insert mode
-imap <leader>c <Plug>CapsLockToggle
-
 " coffeetags for coffeescript
 if executable('coffeetags')
   let g:tagbar_type_coffee = {
@@ -371,16 +384,11 @@ if executable('coffeetags')
         \ }
 endif
 
-" tagbar
-nnoremap <leader>tb :TagbarToggle<CR>
-
 " clear screen before running a command
 map :! :!clear;
 
 " switch to previous window in insert mode
 inoremap <C-^> <Esc><C-^>
-" in command mode, double leader to go to previous file
-nnoremap <leader><leader> <c-^>
 
 "Here is an example that can be added to your .vimrc which will setup the
 "supertab chaining for any filetype that has a provided |omnifunc| to
@@ -391,9 +399,6 @@ nnoremap <leader><leader> <c-^>
     \   call SuperTabSetDefaultCompletionType("<c-x><c-u>") |
     \ endif
 
-" Switch CWD to the directory of the open buffer:
-map <leader>cd :cd %:p:h<cr>:pwd<cr>
-
 " create ~/.vim_undodir if it doesn't exist yet
 silent !mkdir ~/.vim_undodir > /dev/null 2>&1
 " persistent undo
@@ -401,13 +406,6 @@ set undodir=~/.vim_undodir
 set undofile
 set undolevels=1000 "maximum number of changes that can be undone
 set undoreload=10000 "maximum number lines to save for undo on a buffer reload
-
-" fast save a buffer
-nmap <leader>w :w<cr>
-nmap <leader>wa :wa<cr>
-" saveas to the path of the current file
-command! -nargs=1 SaveasSamePath exe "sav " . expand("%:p:h") . "/" .  expand("<args>")
-nmap <leader>ss :SaveasSamePath
 
 " make 'crontab -e' work on Mac
 au FileType crontab set nobackup nowritebackup
@@ -420,9 +418,6 @@ let g:vimclojure#DynamicHighlighting=1
 " let vimclojure#WantNailgun = 1
 let vimclojure#SplitPos = "right"
 let vimclojure#FuzzyIndent = 1
-
-" foreplay.vim
-nmap <leader>e :Eval<cr>
 
 " swap the current word with the next one without changing cursor position
 :nnoremap <silent> gw "_yiw:s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<CR><c-o><c-l>
