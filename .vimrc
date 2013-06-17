@@ -310,9 +310,9 @@ cscope add cscope.out
 " NERD_tree
 " show list on the right side
 " let g:NERDTreeWinPos = "right"
-" Press '\n' to toggle NERDTree
+
 " close vim when the only window left is NERDTree
-" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " use solarized.vim color scheme
 " set background=dark
