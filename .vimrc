@@ -449,3 +449,7 @@ au BufEnter *.scala setl formatprg=java\ -jar\ ~/scripts/scalariform.jar\ --stdi
 "hi link EasyMotionShade  Comment
 hi EasyMotionTarget ctermbg=none ctermfg=red
 hi EasyMotionShade  ctermbg=none ctermfg=blue
+
+" vim-session
+:let g:session_autosave = 'yes'
+:let g:session_autoload = 'no'
