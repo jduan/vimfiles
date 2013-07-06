@@ -196,3 +196,9 @@
 [submodule ".vim/bundle/vim-shootingstar"]
 	path = .vim/bundle/vim-shootingstar
 	url = git://github.com/jceb/vim-shootingstar.git
+[submodule ".vim/bundle/vim-misc"]
+	path = .vim/bundle/vim-misc
+	url = https://github.com/xolox/vim-misc
+[submodule ".vim/bundle/vim-session"]
+	path = .vim/bundle/vim-session
+	url = https://github.com/xolox/vim-session
