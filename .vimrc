@@ -455,3 +455,6 @@ hi EasyMotionShade  ctermbg=none ctermfg=blue
 :let g:session_autoload = 'no'
 " Enable aliases from SessionOpen to OpenSession and etc
 :let g:session_command_aliases = 1
+
+" show vertical line for column 80
+set colorcolumn=80
