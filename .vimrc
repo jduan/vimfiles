@@ -453,3 +453,5 @@ hi EasyMotionShade  ctermbg=none ctermfg=blue
 " vim-session
 :let g:session_autosave = 'yes'
 :let g:session_autoload = 'no'
+" Enable aliases from SessionOpen to OpenSession and etc
+:let g:session_command_aliases = 1
