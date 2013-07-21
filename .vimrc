@@ -458,3 +458,6 @@ hi EasyMotionShade  ctermbg=none ctermfg=blue
 
 " show vertical line for column 80
 set colorcolumn=80
+
+" use relative number
+set relativenumber
