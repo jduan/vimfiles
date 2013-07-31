@@ -463,4 +463,4 @@ set colorcolumn=80
 set relativenumber
 
 " format json: visually select a region and hit j
-map j !python -m json.tool<CR>
+vmap <leader>j !python -m json.tool<CR>
