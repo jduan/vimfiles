@@ -196,19 +196,11 @@ function ModifiedFlag()
     endif
 endfunc
 
-"
-" Perl code folding options
-"
-" let perl_fold=1
-" let perl_include_pod=1
-
-"
-" Because I don't like to type much. . .
-"
-iabbr --r -- Jason, <C-R>=strftime("%Y-%m-%d")<CR>
-iabbr --n Jason A. Crome
-iabbr --e cromedome@cpan.org
-iabbr --w crome@devnetinc.com
+" create shortcuts
+"iabbr --r -- Jason, <C-R>=strftime("%Y-%m-%d")<CR>
+"iabbr --n Jason A. Crome
+"iabbr --e cromedome@cpan.org
+"iabbr --w crome@devnetinc.com
 
 " perl_synwrite
 silent call system("perl -e0 -MVi::QuickFix=silent")
@@ -227,10 +219,6 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\.class$\|\.exe$\|\.swp$\|\.pyc$\|\.so$\|\.dll$',
   \ 'link': 'some_bad_symbolic_links',
   \ }
-
-" map <F6> :clist<CR>
-" map <F7> :cprevious<CR>
-" map <F8> :cnext<CR>
 
 " minibufexplorer settings
 let g:miniBufExplUseSingleClick = 1
