@@ -419,7 +419,7 @@ let g:multichange_mapping = ''
 
 " This lets me set a macro by first wacking qq, then q to finish, and then
 " replay it by wacking space.
-noremap <Space> @q
+" noremap <Space> @q
 
 " make the gutter space cleaner
 highlight clear SignColumn
