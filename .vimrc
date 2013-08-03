@@ -62,7 +62,7 @@ set incsearch
 set hlsearch " highlight all matches for the pattern
 " Clear the search buffer when hitting return
 function! MapCR()
-  nnoremap <cr> :nohlsearch<cr>
+  nnoremap <Space> :nohlsearch<cr>
 endfunction"
 call MapCR()
 autocmd! CmdwinEnter * :unmap <cr>
