@@ -7,7 +7,7 @@ let loaded_matchparen=1
 let mapleader = ","
 " Ack the word under cursor
 nnoremap <leader>a :Ack! --ignore-dir coverage <cword><CR>
-  \ 'dir':  'build$\|coverage$\|\.pyc$\|\.swp$\|\.git$\|\.hg$\|\.svn$',
+  \ 'dir':  'build$\|node_modules$\|coverage$\|\.pyc$\|\.swp$\|\.git$\|\.hg$\|\.svn$',
 nnoremap <leader>be :BufExplorer<CR>
 " capslock.vim: turn caps on and off
 " default behavior is to disable caps lock when leaving insert mode
