@@ -439,7 +439,9 @@ hi EasyMotionTarget ctermbg=none ctermfg=red
 hi EasyMotionShade  ctermbg=none ctermfg=blue
 
 " vim-session
+" automatically save the current session when quiting vim
 :let g:session_autosave = 'yes'
+" don't open the "default" or prompt for anything when starting vim
 :let g:session_autoload = 'no'
 " Enable aliases from SessionOpen to OpenSession and etc
 :let g:session_command_aliases = 1
