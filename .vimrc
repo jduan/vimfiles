@@ -6,7 +6,7 @@ let loaded_matchparen=1
 
 let mapleader = ","
 " Ack the word under cursor
-nnoremap <leader>a :Ack! --ignore-dir coverage <cword><CR>
+nnoremap <leader>a :Ack! --ignore-dir coverage --ignore-dir node_modules --ignore-dir build <cword><CR>
   \ 'dir':  'build$\|node_modules$\|coverage$\|\.pyc$\|\.swp$\|\.git$\|\.hg$\|\.svn$',
 nnoremap <leader>be :BufExplorer<CR>
 " capslock.vim: turn caps on and off
