@@ -410,6 +410,8 @@ let g:vimclojure#DynamicHighlighting=1
 " let vimclojure#WantNailgun = 1
 let vimclojure#SplitPos = "right"
 let vimclojure#FuzzyIndent = 1
+" use clojure plugin to format Racket files
+au BufNewFile,BufRead,BufReadPost *.rkt,*.rktl set filetype=clojure
 
 " swap the current word with the next one without changing cursor position
 :nnoremap <silent> gw "_yiw:s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<CR><c-o><c-l>
