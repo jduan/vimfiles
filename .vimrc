@@ -458,3 +458,11 @@ set relativenumber
 
 " format json: visually select a region and hit j
 vmap <leader>j !python -m json.tool<CR>
+
+" Avoid scrolling when switch buffers
+" When switching buffers, preserve window view.
+" http://vim.wikia.com/wiki/Avoid_scrolling_when_switch_buffers
+if v:version >= 700
+  au BufLeave * if !&diff | let b:winview = winsaveview() | endif
+  au BufEnter * if exists('b:winview') && !&diff | call winrestview(b:winview) | endif
+endif
