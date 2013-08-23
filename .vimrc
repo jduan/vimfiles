@@ -306,7 +306,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 let NERDTreeIgnore=['node_modules$[[dir]]']
 
 " use solarized.vim color scheme
-set background=dark
+set background=light
 colorscheme solarized
 
 " Press ;; to exit insert mode
