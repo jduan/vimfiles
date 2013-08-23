@@ -115,6 +115,7 @@ set title                " do set the xterm title (see 'titleold', set below)
 set undolevels=1000      " LOTS of undo history
 set wildignore+=*/CVS/   " don't try to descend into CVS directories
 set wildignore+=*/SVN/   " don't try to descend into SVN directories
+set wildignorecase       " When set case is ignored when completing file names and directories.
 set wildmenu             " enable menu of completions
 " set wildmode=longest:full,full
                          " complete only as much as is common,
@@ -305,8 +306,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 let NERDTreeIgnore=['node_modules$[[dir]]']
 
 " use solarized.vim color scheme
-" set background=dark
-" colorscheme solarized
+set background=dark
+colorscheme solarized
 
 " Press ;; to exit insert mode
 :imap ii <Esc>
