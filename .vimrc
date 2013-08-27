@@ -47,6 +47,12 @@ nnoremap <leader>tl :TlistToggle<CR>
 nnoremap <leader>tb :TagbarToggle<CR>
 " in command mode, double leader to go to previous file
 nnoremap <leader><leader> <c-^>
+" switch to previous window in insert mode
+inoremap <C-^> <Esc><C-^>
+nnoremap <C-e> <C-^>
+" C-e doesn't work because of vim-rsi plugin
+inoremap <C-e> <C-^>
+
 " fast save a buffer
 nmap <leader>w :w<cr>
 nmap <leader>wa :wa<cr>
@@ -378,9 +384,6 @@ endif
 
 " clear screen before running a command
 map :! :!clear;
-
-" switch to previous window in insert mode
-inoremap <C-^> <Esc><C-^>
 
 "Here is an example that can be added to your .vimrc which will setup the
 "supertab chaining for any filetype that has a provided |omnifunc| to
