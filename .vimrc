@@ -469,3 +469,6 @@ if v:version >= 700
   au BufLeave * if !&diff | let b:winview = winsaveview() | endif
   au BufEnter * if exists('b:winview') && !&diff | call winrestview(b:winview) | endif
 endif
+
+" Delete a line, content only, not the line itself
+noremap ]d <Esc>0D
