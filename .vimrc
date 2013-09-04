@@ -472,3 +472,9 @@ endif
 
 " Delete a line, content only, not the line itself
 noremap ]d <Esc>0D
+
+" clever-f.vim plugin
+" only search on the current line
+:let g:clever_f_across_no_line = 1
+" always search forward with f and backward with F
+:let g:clever_f_fix_key_direction = 1
