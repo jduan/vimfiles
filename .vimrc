@@ -39,6 +39,7 @@ nnoremap <leader>rs :%s/\s\+$//<cr>:let @/=''<CR>
 nnoremap <leader>rw :set modifiable<CR>
 " open up a shell inside vim
 nnoremap <leader>sh :ConqueTerm zsh<CR>
+nnoremap <leader>sc :SyntasticToggleMode<CR>
 " saveas to the path of the current file
 command! -nargs=1 SaveasSamePath exe "sav " . expand("%:p:h") . "/" .  expand("<args>")
 nmap <leader>ss :SaveasSamePath
