@@ -220,3 +220,6 @@
 [submodule ".vim/bundle/clever-f.vim"]
 	path = .vim/bundle/clever-f.vim
 	url = https://github.com/rhysd/clever-f.vim
+[submodule ".vim/bundle/dragvisuals.vim"]
+	path = .vim/bundle/dragvisuals.vim
+	url = https://github.com/jduan/dragvisuals.vim
