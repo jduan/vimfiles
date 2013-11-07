@@ -479,3 +479,6 @@ noremap ]d <Esc>0D
 :let g:clever_f_across_no_line = 1
 " always search forward with f and backward with F
 :let g:clever_f_fix_key_direction = 1
+
+" map ; to :
+noremap ; :
