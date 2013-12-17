@@ -309,7 +309,7 @@ cscope add cscope.out
 " close vim when the only window left is NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 " ignore node_modules/ directory
-let NERDTreeIgnore=['node_modules$[[dir]]', '\.pyc$']
+let NERDTreeIgnore=['node_modules$[[dir]]', '\.pyc$', 'coverage$[[dir]]', 'doc$[[dir]]']
 
 " use solarized.vim color scheme
 " set background=dark
@@ -491,4 +491,4 @@ vmap  <expr>  <UP>     DVB_Drag('up')
 vmap  <expr>  D        DVB_Duplicate()
 
 " javascript
-au BufEnter *.js setl shiftwidth=4
+au BufEnter *.js,*.coffee setl shiftwidth=4
