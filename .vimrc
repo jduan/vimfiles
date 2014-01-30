@@ -492,3 +492,6 @@ vmap  <expr>  D        DVB_Duplicate()
 
 " javascript
 au BufEnter *.js,*.coffee setl shiftwidth=4
+
+" pants
+au BufEnter BUILD setl filetype=python
