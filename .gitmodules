@@ -226,3 +226,6 @@
 [submodule ".vim/bundle/vim-python-pep8-indent"]
 	path = .vim/bundle/vim-python-pep8-indent
 	url = https://github.com/hynek/vim-python-pep8-indent
+[submodule ".vim/bundle/bash-support.vim"]
+	path = .vim/bundle/bash-support.vim
+	url = https://github.com/vim-scripts/bash-support.vim.git
