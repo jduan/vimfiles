@@ -500,4 +500,4 @@ au BufEnter BUILD setl filetype=python
 au BufEnter *.sh setl shiftwidth=2
 
 " python scripts
-au BufEnter *.py setl shiftwidth=2
+au FileType python setl shiftwidth=2
