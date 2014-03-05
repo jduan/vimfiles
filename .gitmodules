@@ -229,3 +229,6 @@
 [submodule ".vim/bundle/bash-support.vim"]
 	path = .vim/bundle/bash-support.vim
 	url = https://github.com/vim-scripts/bash-support.vim.git
+[submodule ".vim/bundle/vim-pants"]
+	path = .vim/bundle/vim-pants
+	url = https://github.com/pantsbuild/vim-pants.git
