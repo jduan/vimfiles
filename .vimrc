@@ -500,4 +500,5 @@ au BufEnter *.js,*.coffee setl shiftwidth=4
 au BufEnter *.sh setl shiftwidth=2
 
 " python scripts
+au BufNewFile,BufRead,BufReadPost *.mesos,*.aurora set filetype=python
 au FileType python setl shiftwidth=2
