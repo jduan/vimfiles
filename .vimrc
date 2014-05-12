@@ -316,7 +316,7 @@ let NERDTreeIgnore=['node_modules$[[dir]]', '\.pyc$', 'coverage$[[dir]]', 'doc$[
 " colorscheme solarized
 
 " Press ;; to exit insert mode
-:imap ii <Esc>
+" :imap ii <Esc>
 
 " turn on cursor line
 set cursorline
