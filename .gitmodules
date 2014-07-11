@@ -29,86 +29,86 @@
     path = .vim/bundle/vim-surround
     url = git://github.com/tpope/vim-surround.git
 [submodule ".vim/bundle/supertab"]
-	path = .vim/bundle/supertab
-	url = https://github.com/ervandew/supertab.git
+    path = .vim/bundle/supertab
+    url = https://github.com/ervandew/supertab.git
 [submodule ".vim/bundle/IndexedSearch"]
-	path = .vim/bundle/IndexedSearch
-	url = https://github.com/vim-scripts/IndexedSearch.git
+    path = .vim/bundle/IndexedSearch
+    url = https://github.com/vim-scripts/IndexedSearch.git
 [submodule ".vim/bundle/vim-railscasts-theme"]
-	path = .vim/bundle/vim-railscasts-theme
-	url = https://github.com/jpo/vim-railscasts-theme.git
+    path = .vim/bundle/vim-railscasts-theme
+    url = https://github.com/jpo/vim-railscasts-theme.git
 [submodule ".vim/bundle/vim-easymotion"]
-	path = .vim/bundle/vim-easymotion
-	url = https://github.com/Lokaltog/vim-easymotion.git
+    path = .vim/bundle/vim-easymotion
+    url = https://github.com/Lokaltog/vim-easymotion.git
 [submodule ".vim/bundle/csapprox"]
-	path = .vim/bundle/csapprox
-	url = https://github.com/godlygeek/csapprox.git
+    path = .vim/bundle/csapprox
+    url = https://github.com/godlygeek/csapprox.git
 [submodule ".vim/bundle/auto-pairs"]
-	path = .vim/bundle/auto-pairs
-	url = https://github.com/jiangmiao/auto-pairs.git
+    path = .vim/bundle/auto-pairs
+    url = https://github.com/jiangmiao/auto-pairs.git
 [submodule ".vim/bundle/vim-repeat"]
-	path = .vim/bundle/vim-repeat
-	url = https://github.com/tpope/vim-repeat.git
+    path = .vim/bundle/vim-repeat
+    url = https://github.com/tpope/vim-repeat.git
 [submodule ".vim/bundle/syntastic"]
-	path = .vim/bundle/syntastic
-	url = https://github.com/scrooloose/syntastic.git
+    path = .vim/bundle/syntastic
+    url = https://github.com/scrooloose/syntastic.git
 [submodule ".vim/bundle/capslock.vim"]
-	path = .vim/bundle/capslock.vim
-	url = https://github.com/vim-scripts/capslock.vim.git
+    path = .vim/bundle/capslock.vim
+    url = https://github.com/vim-scripts/capslock.vim.git
 [submodule ".vim/bundle/vim-unimpaired"]
-	path = .vim/bundle/vim-unimpaired
-	url = https://github.com/tpope/vim-unimpaired.git
+    path = .vim/bundle/vim-unimpaired
+    url = https://github.com/tpope/vim-unimpaired.git
 [submodule ".vim/bundle/VisIncr"]
-	path = .vim/bundle/VisIncr
-	url = git://github.com/vim-scripts/VisIncr.git
+    path = .vim/bundle/VisIncr
+    url = git://github.com/vim-scripts/VisIncr.git
 [submodule ".vim/bundle/vim-abolish"]
-	path = .vim/bundle/vim-abolish
-	url = git://github.com/tpope/vim-abolish.git
+    path = .vim/bundle/vim-abolish
+    url = git://github.com/tpope/vim-abolish.git
 [submodule ".vim/bundle/vim-visualstar"]
-	path = .vim/bundle/vim-visualstar
-	url = https://github.com/thinca/vim-visualstar.git
+    path = .vim/bundle/vim-visualstar
+    url = https://github.com/thinca/vim-visualstar.git
 [submodule ".vim/bundle/sessionman.vim"]
-	path = .vim/bundle/sessionman.vim
-	url = https://github.com/vim-scripts/sessionman.vim.git
+    path = .vim/bundle/sessionman.vim
+    url = https://github.com/vim-scripts/sessionman.vim.git
 [submodule ".vim/bundle/pb.vim"]
-	path = .vim/bundle/pb.vim
-	url = https://github.com/troydm/pb.vim.git
+    path = .vim/bundle/pb.vim
+    url = https://github.com/troydm/pb.vim.git
 [submodule ".vim/bundle/vim-markdown"]
-	path = .vim/bundle/vim-markdown
-	url = https://github.com/tpope/vim-markdown.git
+    path = .vim/bundle/vim-markdown
+    url = https://github.com/tpope/vim-markdown.git
 [submodule ".vim/bundle/vim-rsi"]
-	path = .vim/bundle/vim-rsi
-	url = https://github.com/tpope/vim-rsi.git
+    path = .vim/bundle/vim-rsi
+    url = https://github.com/tpope/vim-rsi.git
 [submodule ".vim/bundle/vim-seek"]
-	path = .vim/bundle/vim-seek
-	url = https://github.com/goldfeld/vim-seek.git
+    path = .vim/bundle/vim-seek
+    url = https://github.com/goldfeld/vim-seek.git
 [submodule ".vim/bundle/vim-session"]
-	path = .vim/bundle/vim-session
-	url = https://github.com/xolox/vim-session
+    path = .vim/bundle/vim-session
+    url = https://github.com/xolox/vim-session
 [submodule ".vim/bundle/indentLine"]
-	path = .vim/bundle/indentLine
-	url = https://github.com/Yggdroot/indentLine
+    path = .vim/bundle/indentLine
+    url = https://github.com/Yggdroot/indentLine
 [submodule ".vim/bundle/vim-javascript-syntax"]
-	path = .vim/bundle/vim-javascript-syntax
-	url = https://github.com/jelera/vim-javascript-syntax
+    path = .vim/bundle/vim-javascript-syntax
+    url = https://github.com/jelera/vim-javascript-syntax
 [submodule ".vim/bundle/vim-gitgutter"]
-	path = .vim/bundle/vim-gitgutter
-	url = https://github.com/airblade/vim-gitgutter
+    path = .vim/bundle/vim-gitgutter
+    url = https://github.com/airblade/vim-gitgutter
 [submodule ".vim/bundle/clever-f.vim"]
-	path = .vim/bundle/clever-f.vim
-	url = https://github.com/rhysd/clever-f.vim
+    path = .vim/bundle/clever-f.vim
+    url = https://github.com/rhysd/clever-f.vim
 [submodule ".vim/bundle/vim-python-pep8-indent"]
-	path = .vim/bundle/vim-python-pep8-indent
-	url = https://github.com/hynek/vim-python-pep8-indent
+    path = .vim/bundle/vim-python-pep8-indent
+    url = https://github.com/hynek/vim-python-pep8-indent
 [submodule ".vim/bundle/vim-fireplace"]
-	path = .vim/bundle/vim-fireplace
-	url = git://github.com/tpope/vim-fireplace.git
+    path = .vim/bundle/vim-fireplace
+    url = git://github.com/tpope/vim-fireplace.git
 [submodule ".vim/bundle/vim-clojure-static"]
-	path = .vim/bundle/vim-clojure-static
-	url = git://github.com/guns/vim-clojure-static.git
+    path = .vim/bundle/vim-clojure-static
+    url = git://github.com/guns/vim-clojure-static.git
 [submodule ".vim/bundle/vim-scala"]
-	path = .vim/bundle/vim-scala
-	url = https://github.com/derekwyatt/vim-scala
+    path = .vim/bundle/vim-scala
+    url = https://github.com/derekwyatt/vim-scala
 [submodule ".vim/bundle/vim-misc"]
-	path = .vim/bundle/vim-misc
-	url = https://github.com/xolox/vim-misc
+    path = .vim/bundle/vim-misc
+    url = https://github.com/xolox/vim-misc
