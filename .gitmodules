@@ -67,9 +67,6 @@
 [submodule ".vim/bundle/vim-visualstar"]
     path = .vim/bundle/vim-visualstar
     url = https://github.com/thinca/vim-visualstar.git
-[submodule ".vim/bundle/sessionman.vim"]
-    path = .vim/bundle/sessionman.vim
-    url = https://github.com/vim-scripts/sessionman.vim.git
 [submodule ".vim/bundle/pb.vim"]
     path = .vim/bundle/pb.vim
     url = https://github.com/troydm/pb.vim.git
