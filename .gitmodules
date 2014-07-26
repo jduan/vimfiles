@@ -106,3 +106,6 @@
 [submodule ".vim/bundle/vim-misc"]
     path = .vim/bundle/vim-misc
     url = https://github.com/xolox/vim-misc
+[submodule ".vim/bundle/tcomment_vim"]
+	path = .vim/bundle/tcomment_vim
+	url = https://github.com/tomtom/tcomment_vim
