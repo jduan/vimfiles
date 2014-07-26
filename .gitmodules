@@ -109,3 +109,6 @@
 [submodule ".vim/bundle/tcomment_vim"]
 	path = .vim/bundle/tcomment_vim
 	url = https://github.com/tomtom/tcomment_vim
+[submodule ".vim/bundle/bufkill.vim"]
+	path = .vim/bundle/bufkill.vim
+	url = https://github.com/vim-scripts/bufkill.vim
