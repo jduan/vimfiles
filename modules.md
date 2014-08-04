@@ -1,3 +1,6 @@
+Warnings:
+vim-gitgutter causes weird displaying/typing issues that render vim unusable.
+
 ## IndexedSearch
 shows 'Nth match out of M' at every search
 ## VisIncr
