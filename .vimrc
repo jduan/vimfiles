@@ -506,3 +506,6 @@ au FileType python setl shiftwidth=2
 
 " ignore file/directory cases when using file names and directories.
 set fileignorecase
+
+" preserver 'no end of line'
+:let g:PreserveNoEOL = 1

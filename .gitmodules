@@ -121,3 +121,6 @@
 [submodule ".vim/bundle/ack.vim"]
 	path = .vim/bundle/ack.vim
 	url = https://github.com/mileszs/ack.vim
+[submodule ".vim/bundle/PreserveNoEOL"]
+	path = .vim/bundle/PreserveNoEOL
+	url = https://github.com/vim-scripts/PreserveNoEOL
