@@ -439,7 +439,7 @@ let g:syntastic_javascript_checkers = ['jshint']
 " turn on/off checks for given languages
 let g:syntastic_mode_map={ 'mode': 'active',
                      \ 'active_filetypes': [],
-                     \ 'passive_filetypes': ['java', 'scala'] }
+                     \ 'passive_filetypes': ['java', 'scala', 'python'] }
 
 " scala format
 au BufEnter *.scala setl formatprg=java\ -jar\ ~/scripts/scalariform.jar\ --stdin\ --stdout
