@@ -309,7 +309,7 @@ cscope add cscope.out
 " close vim when the only window left is NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 " ignore node_modules/ directory
-let NERDTreeIgnore=['node_modules$[[dir]]', '\.pyc$', 'coverage$[[dir]]', 'doc$[[dir]]']
+let NERDTreeIgnore=['node_modules$[[dir]]', '\.pyc$', 'coverage$[[dir]]', 'doc$[[dir]]', '_build$[[dir]]']
 
 " use solarized.vim color scheme
 " set background=dark
