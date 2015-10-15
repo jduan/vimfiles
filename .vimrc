@@ -502,7 +502,6 @@ au BufEnter *.sh setl shiftwidth=2
 " python scripts
 au BufNewFile,BufRead,BufReadPost *.mesos,*.aurora set filetype=python
 au BufNewFile,BufRead,BufReadPost BUILD set filetype=python
-au FileType python setl shiftwidth=2
 
 " ignore file/directory cases when using file names and directories.
 set fileignorecase
