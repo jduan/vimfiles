@@ -6,8 +6,8 @@ let loaded_matchparen=1
 
 let mapleader = ","
 " Ack the word under cursor
-nnoremap <leader>a :Ack! --ignore-dir coverage --ignore-dir node_modules --ignore-dir build <cword><CR>
-  \ 'dir':  'build$\|node_modules$\|coverage$\|\.pyc$\|\.swp$\|\.git$\|\.hg$\|\.svn$',
+nnoremap <leader>a :Ack! --ignore-dir coverage --ignore-dir node_modules --ignore-dir build --ignore-dir deps --ignore-dir _build --ignore-file=is:tags <cword><CR>
+  \ 'dir':  'build$\|node_modules$\|coverage$\|deps$\|_build$\|\.pyc$\|\.swp$\|\.git$\|\.hg$\|\.svn$',
 nnoremap <leader>be :BufExplorer<CR>
 " capslock.vim: turn caps on and off
 " default behavior is to disable caps lock when leaving insert mode
@@ -309,7 +309,7 @@ cscope add cscope.out
 " close vim when the only window left is NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 " ignore node_modules/ directory
-let NERDTreeIgnore=['node_modules$[[dir]]', '\.pyc$', 'coverage$[[dir]]', 'doc$[[dir]]', '_build$[[dir]]']
+let NERDTreeIgnore=['node_modules$[[dir]]', '\.pyc$', 'coverage$[[dir]]', 'doc$[[dir]]', '_build$[[dir]]', 'deps$[[dir]]']
 
 " use solarized.vim color scheme
 " set background=dark
