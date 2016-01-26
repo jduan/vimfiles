@@ -8,17 +8,18 @@ require "fileutils"
 EXCLUDE_LIST = [ ".", "..", ".git", ".gitignore", ".gitmodules" ]
 
 HOME = ENV['HOME']
-target_dir = HOME + "/vimfiles/"
+target_dir = File.expand_path(File.dirname(__FILE__))
 src_dir = HOME + "/"
 Dir.chdir(target_dir)
 Dir.glob('.*').each do |file|
   unless EXCLUDE_LIST.include? file
     src_path = src_dir + file
-    target_path = target_dir + file
-    if File.exists?(src_path)
+    target_path = "#{target_dir}/#{file}"
+    if File.symlink?(src_path)
+      puts "WARNING: src_path #{src_path} exists, removing it now!"
       FileUtils.rm_rf(src_path)
     end
-    puts "create symlink: #{src_path}"
+    puts "creating symlink: from #{target_path} to #{src_path}"
     `ln -s #{target_path} #{src_path}`
   end
 end
