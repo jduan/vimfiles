@@ -219,6 +219,8 @@ autocmd BufNewFile,BufRead *.t  compiler perl
 
 " ctrlp
 map <F5> :CtrlPClearAllCaches<CR>
+" Don't limit how many files to scan
+let g:ctrlp_max_files = 0
 let g:ctrlp_cmd = 'CtrlPMixed'
 " let g:ctrlp_mruf_exclude = '/tmp/.*\|*build*'
 let g:ctrlp_custom_ignore = {
