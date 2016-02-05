@@ -9,6 +9,9 @@ let mapleader = ","
 nnoremap <leader>a :Ack! --ignore-dir coverage --ignore-dir node_modules --ignore-dir build --ignore-dir deps --ignore-dir _build --ignore-file=is:tags <cword><CR>
   \ 'dir':  'build$\|node_modules$\|coverage$\|deps$\|_build$\|\.pyc$\|\.swp$\|\.git$\|\.hg$\|\.svn$',
 nnoremap <leader>be :BufExplorer<CR>
+" Insert the current git branch name. The branch naming convention is:
+" jduan/IPD-26383-blah-blah
+noremap <leader>b :read !git rev-parse --abbrev-ref HEAD <bar> cut -d/ -f2 <bar> cut -d"-" -f1,2 <cr>
 " capslock.vim: turn caps on and off
 " default behavior is to disable caps lock when leaving insert mode
 imap <leader>c <Plug>CapsLockToggle
