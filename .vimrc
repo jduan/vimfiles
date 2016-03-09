@@ -515,7 +515,7 @@ set fileignorecase
 :let g:PreserveNoEOL = 1
 
 " run python stylechecker upton saving python files
-autocmd BufWritePost *.py !/Users/jduan/bin/check.pex <afile>
+" autocmd BufWritePost *.py !/Users/jduan/bin/check.pex <afile>
 
 " Pbyank in visual mode
 vnoremap p :Pbyank<cr>
