@@ -133,3 +133,6 @@
 [submodule ".vim/bundle/vim-markdown.git"]
 	path = .vim/bundle/vim-markdown.git
 	url = https://github.com/gabrielelana/vim-markdown.git
+[submodule ".vim/bundle/vim-jsonnet"]
+	path = .vim/bundle/vim-jsonnet
+	url = https://github.com/google/vim-jsonnet
