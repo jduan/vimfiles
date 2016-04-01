@@ -136,3 +136,9 @@
 [submodule ".vim/bundle/vim-jsonnet"]
 	path = .vim/bundle/vim-jsonnet
 	url = https://github.com/google/vim-jsonnet
+[submodule ".vim/bundle/vim2hs"]
+	path = .vim/bundle/vim2hs
+	url = https://github.com/dag/vim2hs
+[submodule ".vim/bundle/vim-haskell-indent"]
+	path = .vim/bundle/vim-haskell-indent
+	url = https://github.com/itchyny/vim-haskell-indent
