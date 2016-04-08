@@ -142,3 +142,6 @@
 [submodule ".vim/bundle/vim-haskell-indent"]
 	path = .vim/bundle/vim-haskell-indent
 	url = https://github.com/itchyny/vim-haskell-indent
+[submodule ".vim/bundle/puppet"]
+	path = .vim/bundle/puppet
+	url = git://github.com/rodjek/vim-puppet.git
