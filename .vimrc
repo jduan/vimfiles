@@ -105,7 +105,7 @@ set hidden               " hide, don't close, undisplayed buffers
 set history=50           " keep 50 lines of command history
 set more                 " page on extended output
 set novb                 " disable visual bell
-set nowrap               " don't automatically wrap lines
+set wrap                 " automatically wrap lines
 set number               " turn on line numbering
 set path=.,$HOME,,       " for editing with :find
 set pastetoggle=<S-F1>   " Shift-F1 to toggle paste
@@ -131,7 +131,6 @@ set wildmenu             " enable menu of completions
                          " then show menu
 " tab completion: longest only
 set wildmode=longest,list
-" set wrap
 set textwidth=80
 set writeany             " avoid constant ! to overwrite. . .
 
