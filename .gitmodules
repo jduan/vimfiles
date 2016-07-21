@@ -145,3 +145,6 @@
 [submodule ".vim/bundle/puppet"]
 	path = .vim/bundle/puppet
 	url = git://github.com/rodjek/vim-puppet.git
+[submodule ".vim/bundle/thrift.vim"]
+	path = .vim/bundle/thrift.vim
+	url = https://github.com/solarnz/thrift.vim
