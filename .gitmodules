@@ -148,3 +148,6 @@
 [submodule ".vim/bundle/thrift.vim"]
 	path = .vim/bundle/thrift.vim
 	url = https://github.com/solarnz/thrift.vim
+[submodule ".vim/bundle/Vim-Jinja2-Syntax"]
+	path = .vim/bundle/Vim-Jinja2-Syntax
+	url = https://github.com/Glench/Vim-Jinja2-Syntax
