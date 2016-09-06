@@ -443,7 +443,7 @@ let g:syntastic_javascript_checkers = ['jshint']
 " turn on/off checks for given languages
 let g:syntastic_mode_map={ 'mode': 'active',
                      \ 'active_filetypes': [],
-                     \ 'passive_filetypes': ['java', 'scala', 'python'] }
+                     \ 'passive_filetypes': ['java', 'scala'] }
 
 " scala format
 au BufEnter *.scala setl formatprg=java\ -jar\ ~/scripts/scalariform.jar\ --stdin\ --stdout
@@ -515,6 +515,7 @@ set fileignorecase
 
 " run python stylechecker upton saving python files
 " autocmd BufWritePost *.py !/Users/jduan/bin/check.pex <afile>
+:let g:syntastic_python_checkers = ['flake8']
 
 " Pbyank in visual mode
 vnoremap p :Pbyank<cr>
