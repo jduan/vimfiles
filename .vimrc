@@ -215,10 +215,6 @@ endfunc
 silent call system("perl -e0 -MVi::QuickFix=silent")
 let perl_synwrite_qf = ! v:shell_error   " use Vi::QuickFix if it can be used
 
-" Perl compiler settings
-autocmd BufNewFile,BufRead *.p? compiler perl
-autocmd BufNewFile,BufRead *.t  compiler perl
-
 " ctrlp
 map <F5> :CtrlPClearAllCaches<CR>
 " Don't limit how many files to scan
