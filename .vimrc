@@ -64,36 +64,24 @@ nmap <leader>w :w<cr>
 nmap <leader>wa :wa<cr>
 
 
-" make searches case-sensitive only if they contain upper-case letters
-set ignorecase smartcase
-set incsearch
-set hlsearch " highlight all matches for the pattern
-" Clear the search buffer when hitting the "space bar"
-function! MapCR()
-  nnoremap <Space> :nohlsearch<cr>
-endfunction"
-call MapCR()
-
-set cindent
-set statusline=%<[%02n]\ %F%(\ %m%h%w%y%r%)\ %{fugitive#statusline()}\ %a%=\ [%l,%c%V](%P)\ [%08O:%02B]
-set laststatus=2
-" mappings
-imap jj \bi<CR>\item<CR>\ei<Esc>kA
-
 set autoindent           " carry over indenting from previous line
-set backspace=2          " allow backspace beyond insertion point
 set background=dark      " console bg is dark
-set backupdir=/tmp       " put backups in /tmp
+set backspace=2          " allow backspace beyond insertion point
 set backupdir-=.         " ...and not in cwd
+set backupdir=/tmp       " put backups in /tmp
+set cindent
 set cinkeys-=0#          " don't unindent cpp stuff (perl comments!)
 set clipboard+=unnamed   " put yanks/etc on the clipboard
-set comments=b://,b:#    " by default allow C++ (JS) and generic unixy comments
+set colorcolumn=80       " show vertical line for column 80
 set com+=s1:/*,mb:*,ex:*/  " ...and also C-style comments
+set comments=b://,b:#    " by default allow C++ (JS) and generic unixy comments
 set copyindent           " make autoindent use the same characters to indent
 set cursorline            " turn on cursor line
-set directory=/tmp       " store temp files someplace out of the way
 set directory-=.         " . . .and don't store temp files in cwd
+set directory=/tmp       " store temp files someplace out of the way
 set encoding=utf-8       " unicode
+set expandtab            " spaces, not tabs!
+set fileignorecase       " ignore file/directory cases when using file names and directories.
 set foldcolumn=0         " no fold column
 set foldlevelstart=0     " start with all folds closed
 set formatoptions=r      " r - re-insert comment leader on newline
@@ -101,23 +89,28 @@ set formatprg=par        " use 'par' to format text with 'gq'
 set guioptions+=agimrLt  " make vim act like a gui when started like one
 set hidden               " hide, don't close, undisplayed buffers
 set history=50           " keep 50 lines of command history
+set hlsearch             " highlight all matches for the pattern
+set ignorecase smartcase " make searches case-sensitive only if they contain upper-case letters
+set incsearch
+set laststatus=2
 set more                 " page on extended output
-set novb                 " disable visual bell
-set wrap                 " automatically wrap lines
-set number               " turn on line numbering
 set nocompatible         " We're running Vim, not Vi!
-set path=.,$HOME,,       " for editing with :find
+set novb                 " disable visual bell
 set pastetoggle=<S-F1>   " Shift-F1 to toggle paste
+set path=.,$HOME,,       " for editing with :find
+set relativenumber       " use relative number
 set report=1             " Always report changes
 set ruler                " display cursor position
-set showcmd              " show command-in-progress
-set showmode             " show the current input mode
-set showmatch            " Automagically show matching brackets
-set expandtab            " spaces, not tabs!
-set softtabstop=4        " make four spaces act like tabs
-set tabstop=4            " The One True Tab (as of latest revision)
 set shiftwidth=4         " affects what happens when you press >>, << etc
+set showcmd              " show command-in-progress
+set showmatch            " Automagically show matching brackets
+set showmode             " show the current input mode
+set softtabstop=4        " make four spaces act like tabs
+set statusline=%<[%02n]\ %F%(\ %m%h%w%y%r%)\ %{fugitive#statusline()}\ %a%=\ [%l,%c%V](%P)\ [%08O:%02B]
+set t_Co=256             " 256 colors
+set tabstop=4            " The One True Tab (as of latest revision)
 set terse
+set textwidth=80
 set timeout              " allow keys to timeout
 set timeoutlen=500       " millisecs, time out between 2 keystrokes
 set title                " do set the xterm title (see 'titleold', set below)
@@ -125,14 +118,15 @@ set undolevels=1000      " LOTS of undo history
 set wildignore+=*/CVS/   " don't try to descend into CVS directories
 set wildignore+=*/SVN/   " don't try to descend into SVN directories
 set wildmenu             " enable menu of completions
-" tab completion: longest only
-set wildmode=longest,list
-set textwidth=80
+set wildmode=longest,list " tab completion: longest only
+set wrap                 " automatically wrap lines
 set writeany             " avoid constant ! to overwrite. . .
-set t_Co=256             " 256 colors
-set colorcolumn=80       " show vertical line for column 80
-set relativenumber       " use relative number
-set fileignorecase       " ignore file/directory cases when using file names and directories.
+
+" Clear the search buffer when hitting the "space bar"
+function! MapCR()
+  nnoremap <Space> :nohlsearch<cr>
+endfunction"
+call MapCR()
 
 colorscheme railscasts   " use railscasts color scheme
 
@@ -272,6 +266,8 @@ let NERDTreeIgnore=['node_modules$[[dir]]', '\.pyc$', '\.beam$', 'coverage$[[dir
 
 " Press ii to exit insert mode
 :imap ii <Esc>
+" mappings
+imap jj \bi<CR>\item<CR>\ei<Esc>kA
 
 " restore cursor position
 " autocmd BufReadPost *
