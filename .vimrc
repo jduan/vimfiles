@@ -96,6 +96,7 @@ set laststatus=2
 set more                 " page on extended output
 set nocompatible         " We're running Vim, not Vi!
 set novb                 " disable visual bell
+set number               " turn on line numbering
 set pastetoggle=<S-F1>   " Shift-F1 to toggle paste
 set path=.,$HOME,,       " for editing with :find
 set relativenumber       " use relative number
