@@ -4,11 +4,16 @@ call pathogen#infect()
 " disable 'highlighting the matching paren'
 let loaded_matchparen=1
 
+
+""""""""""""""""""" leader maps """""""""""""""""""
 let mapleader = ","
 " Ack the word under cursor
 nnoremap <leader>a :Ack! --ignore-dir coverage --ignore-dir node_modules --ignore-dir build --ignore-dir deps --ignore-dir _build --ignore-file=is:tags <cword><CR>
   \ 'dir':  'build$\|node_modules$\|coverage$\|deps$\|_build$\|\.pyc$\|\.swp$\|\.git$\|\.hg$\|\.svn$',
+" bufferexplorer: use relative path
 nnoremap <leader>be :BufExplorer<CR>
+let g:bufExplorerShowRelativePath=1
+
 " Insert the current git branch name. The branch naming convention is:
 " jduan/IPD-26383-blah-blah
 noremap <leader>b :read !git rev-parse --abbrev-ref HEAD <bar> cut -d/ -f2 <bar> cut -d"-" -f1,2 <cr>
@@ -34,7 +39,6 @@ map <leader>p :set paste<CR>
 map <leader>pp :set nopaste<CR>
 nnoremap <leader>q gqip
 nnoremap <leader>t :Tabularize /
-vnoremap <leader>t :Tabularize /
 " make file read only
 nnoremap <leader>ro :set nomodifiable<CR>
 " <leader>W to remove all trailing white spaces
@@ -53,30 +57,23 @@ nnoremap <leader>tb :TagbarToggle<CR>
 nnoremap <leader><leader> <c-^>
 " switch to previous window in insert mode
 inoremap <C-^> <Esc><C-^>
-nnoremap <C-e> <C-^>
 " C-e doesn't work because of vim-rsi plugin
 inoremap <C-e> <C-^>
-
 " fast save a buffer
 nmap <leader>w :w<cr>
 nmap <leader>wa :wa<cr>
 
 
-
-" Other command mappings
-map <C-p> :pwd<cr>
-
 " make searches case-sensitive only if they contain upper-case letters
 set ignorecase smartcase
 set incsearch
 set hlsearch " highlight all matches for the pattern
-" Clear the search buffer when hitting return
+" Clear the search buffer when hitting the "space bar"
 function! MapCR()
   nnoremap <Space> :nohlsearch<cr>
 endfunction"
 call MapCR()
-"autocmd! CmdwinEnter * :unmap <cr>
-"autocmd! CmdwinLeave * :call MapCR()
+
 set cindent
 set statusline=%<[%02n]\ %F%(\ %m%h%w%y%r%)\ %{fugitive#statusline()}\ %a%=\ [%l,%c%V](%P)\ [%08O:%02B]
 set laststatus=2
@@ -93,6 +90,7 @@ set clipboard+=unnamed   " put yanks/etc on the clipboard
 set comments=b://,b:#    " by default allow C++ (JS) and generic unixy comments
 set com+=s1:/*,mb:*,ex:*/  " ...and also C-style comments
 set copyindent           " make autoindent use the same characters to indent
+set cursorline            " turn on cursor line
 set directory=/tmp       " store temp files someplace out of the way
 set directory-=.         " . . .and don't store temp files in cwd
 set encoding=utf-8       " unicode
@@ -107,6 +105,7 @@ set more                 " page on extended output
 set novb                 " disable visual bell
 set wrap                 " automatically wrap lines
 set number               " turn on line numbering
+set nocompatible         " We're running Vim, not Vi!
 set path=.,$HOME,,       " for editing with :find
 set pastetoggle=<S-F1>   " Shift-F1 to toggle paste
 set report=1             " Always report changes
@@ -126,17 +125,24 @@ set undolevels=1000      " LOTS of undo history
 set wildignore+=*/CVS/   " don't try to descend into CVS directories
 set wildignore+=*/SVN/   " don't try to descend into SVN directories
 set wildmenu             " enable menu of completions
-" set wildmode=longest:full,full
-                         " complete only as much as is common,
-                         " then show menu
 " tab completion: longest only
 set wildmode=longest,list
 set textwidth=80
 set writeany             " avoid constant ! to overwrite. . .
-
 set t_Co=256             " 256 colors
+set colorcolumn=80       " show vertical line for column 80
+set relativenumber       " use relative number
+set fileignorecase       " ignore file/directory cases when using file names and directories.
+
 colorscheme railscasts   " use railscasts color scheme
-au BufNewFile,BufRead *.wsdl set filetype=xml
+
+
+""""""""""""""" filetype association """""""""""""""
+" python scripts
+au BufNewFile,BufRead,BufReadPost *.mesos,*.aurora set filetype=python
+au BufNewFile,BufRead,BufReadPost BUILD set filetype=python
+" use clojure plugin to format Racket files
+au BufNewFile,BufRead,BufReadPost *.rkt,*.rktl set filetype=clojure
 
 if has("win32")
     let Tlist_Ctags_Cmd='C:\Progra~1\ctags\ctags.exe'
@@ -205,17 +211,7 @@ function ModifiedFlag()
     endif
 endfunc
 
-" create shortcuts
-"iabbr --r -- Jason, <C-R>=strftime("%Y-%m-%d")<CR>
-"iabbr --n Jason A. Crome
-"iabbr --e cromedome@cpan.org
-"iabbr --w crome@devnetinc.com
-
-" perl_synwrite
-silent call system("perl -e0 -MVi::QuickFix=silent")
-let perl_synwrite_qf = ! v:shell_error   " use Vi::QuickFix if it can be used
-
-" ctrlp
+""""""""""""""" Ctrl-P """""""""""""""
 map <F5> :CtrlPClearAllCaches<CR>
 " Don't limit how many files to scan
 let g:ctrlp_max_files = 0
@@ -227,21 +223,7 @@ let g:ctrlp_custom_ignore = {
   \ 'link': 'some_bad_symbolic_links',
   \ }
 
-" minibufexplorer settings
-let g:miniBufExplUseSingleClick = 1
-let g:miniBufExplSplitBelow=0
-let g:miniBufExplDebugLevel=0
-map <F1> :MBEbp<cr>
-"map <F2> :MBEbn<cr>
-map <S-F3> :TMiniBufExplorer<cr>
-map <silent> ,tb :TMiniBufExplorer<CR>
-
-" Project settings
-let g:proj_window_width = 50
-nmap <silent> <S-F2> <Plug>ToggleProject
-map <silent> ,pb <Plug>ToggleProject
-
-" ctags settings
+""""""""""""""" ctags """""""""""""""
 let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
 let Tlist_Inc_Winwidth=0
 let Tlist_Show_One_File=1
@@ -273,26 +255,7 @@ map <C-n> :tnext<CR>
 " projects - just put the tags file at the top of each project.
 " autocmd BufEnter * lcd %:p:h
 
-" perldoc settings
-let perlhelp_prog='/usr/bin/perldoc'
-nmap <silent> <unique> ,pf <Plug>PerlHelpFuncNormal
-vmap <silent> <unique> ,pf <Plug>PerlHelpFuncVisual
-nmap <silent> <unique> ,pm <Plug>PerlHelpModNormal
-vmap <silent> <unique> ,pm <Plug>PerlHelpModVisual
-"nmap <silent> <unique> <F3> <Plug>PerlHelpModNormal
-"vmap <silent> <unique> <F3> <Plug>PerlHelpModVisual
-"nmap <silent> <unique> <F4> <Plug>PerlHelpFuncNormal
-"vmap <silent> <unique> <F4> <Plug>PerlHelpFuncVisual
-
-" perltidy settings
-nnoremap <silent> ,pt :%!perltidy -q<Enter>
-vnoremap <silent> ,pt :!perltidy -q<Enter>
-nnoremap <silent> <C-F1> :%!perltidy -q<Enter>
-vnoremap <silent> <C-F1> :!perltidy -q<Enter>
-
-
 " vim-ruby
-set nocompatible      " We're running Vim, not Vi!
 syntax on             " Enable syntax highlighting
 filetype on           " Enable filetype detection
 filetype indent on    " Enable filetype-specific indenting
@@ -302,36 +265,19 @@ compiler ruby         " Enable compiler support for ruby
 " load cscope
 cscope add cscope.out
 
-" NERD_tree
-" show list on the right side
-" let g:NERDTreeWinPos = "right"
-
 " close vim when the only window left is NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 " ignore node_modules/ directory
 let NERDTreeIgnore=['node_modules$[[dir]]', '\.pyc$', '\.beam$', 'coverage$[[dir]]', 'doc$[[dir]]', 'build$[[dir]]', '_build$[[dir]]', 'deps$[[dir]]']
 
-" use solarized.vim color scheme
-" set background=dark
-" colorscheme solarized
-
-" Press ;; to exit insert mode
+" Press ii to exit insert mode
 :imap ii <Esc>
 
-" turn on cursor line
-set cursorline
-
-" bufferexplorer: use relative path
-let g:bufExplorerShowRelativePath=1
-
 " restore cursor position
-autocmd BufReadPost *
-    \ if line("'\"") > 1 && line("'\"") <= line("$") |
-    \   exe "normal! g`\"" |
-    \ endif
-
-" auto remove trailing spaces upon save
-" autocmd BufWritePre * :%s/\s\+$//e
+" autocmd BufReadPost *
+"     \ if line("'\"") > 1 && line("'\"") <= line("$") |
+"     \   exe "normal! g`\"" |
+"     \ endif
 
 " rainbow parentheses: this plugin conflicts with VimClojure
 "au VimEnter * RainbowParenthesesToggle
@@ -366,23 +312,6 @@ map <C-l> <C-w>l
 " use w! save with sudo
 cmap w! w !sudo tee % >/dev/null
 
-" coffeetags for coffeescript
-if executable('coffeetags')
-  let g:tagbar_type_coffee = {
-        \ 'ctagsbin' : 'coffeetags',
-        \ 'ctagsargs' : '',
-        \ 'kinds' : [
-        \ 'f:functions',
-        \ 'o:object',
-        \ ],
-        \ 'sro' : ".",
-        \ 'kind2scope' : {
-        \ 'f' : 'object',
-        \ 'o' : 'object',
-        \ }
-        \ }
-endif
-
 " clear screen before running a command
 map :! :!clear;
 
@@ -414,8 +343,6 @@ let g:vimclojure#DynamicHighlighting=1
 " let vimclojure#WantNailgun = 1
 let vimclojure#SplitPos = "right"
 let vimclojure#FuzzyIndent = 1
-" use clojure plugin to format Racket files
-au BufNewFile,BufRead,BufReadPost *.rkt,*.rktl set filetype=clojure
 
 " swap the current word with the next one without changing cursor position
 :nnoremap <silent> gw "_yiw:s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<CR><c-o><c-l>
@@ -425,12 +352,11 @@ au BufNewFile,BufRead,BufReadPost *.rkt,*.rktl set filetype=clojure
 " disable c-n mapping for the multichange plugin
 let g:multichange_mapping = ''
 
-" This lets me set a macro by first wacking qq, then q to finish, and then
-" replay it by wacking space.
-" noremap <Space> @q
-
 " make the gutter space cleaner
 highlight clear SignColumn
+
+" syntastic python
+:let g:syntastic_python_checkers = ['flake8']
 
 " syntastic coffeelint
 let g:syntastic_coffee_coffeelint_args="--csv -f /Users/jingjing.duan/.coffeelint.json"
@@ -457,12 +383,6 @@ hi EasyMotionShade  ctermbg=none ctermfg=blue
 :let g:session_autoload = 'no'
 " Enable aliases from SessionOpen to OpenSession and etc
 :let g:session_command_aliases = 1
-
-" show vertical line for column 80
-set colorcolumn=80
-
-" use relative number
-set relativenumber
 
 " format json: visually select a region and hit j
 vmap <leader>j !python -m json.tool<CR>
@@ -499,19 +419,8 @@ au BufEnter *.js,*.coffee setl shiftwidth=4
 " shell scripts
 au BufEnter *.sh setl shiftwidth=2
 
-" python scripts
-au BufNewFile,BufRead,BufReadPost *.mesos,*.aurora set filetype=python
-au BufNewFile,BufRead,BufReadPost BUILD set filetype=python
-
-" ignore file/directory cases when using file names and directories.
-set fileignorecase
-
 " preserver 'no end of line'
 :let g:PreserveNoEOL = 1
-
-" run python stylechecker upton saving python files
-" autocmd BufWritePost *.py !/Users/jduan/bin/check.pex <afile>
-:let g:syntastic_python_checkers = ['flake8']
 
 " Pbyank in visual mode
 vnoremap p :Pbyank<cr>
