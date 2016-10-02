@@ -352,6 +352,12 @@ let g:multichange_mapping = ''
 " make the gutter space cleaner
 highlight clear SignColumn
 
+" syntastic general
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+
 " syntastic python
 :let g:syntastic_python_checkers = ['flake8']
 
