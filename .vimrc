@@ -13,6 +13,7 @@ nnoremap <leader>a :Ack! --ignore-dir coverage --ignore-dir node_modules --ignor
 " bufferexplorer: use relative path
 nnoremap <leader>be :BufExplorer<CR>
 let g:bufExplorerShowRelativePath=1
+let g:bufExplorerSortBy='fullpath'
 
 " Insert the current git branch name. The branch naming convention is:
 " jduan/IPD-26383-blah-blah
