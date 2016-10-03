@@ -57,6 +57,7 @@ nnoremap <leader>tb :TagbarToggle<CR>
 nnoremap <leader><leader> <c-^>
 " switch to previous window in insert mode
 inoremap <C-^> <Esc><C-^>
+nnoremap <C-e> <C-^>
 " C-e doesn't work because of vim-rsi plugin
 inoremap <C-e> <C-^>
 " fast save a buffer
