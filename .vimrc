@@ -8,6 +8,7 @@ let loaded_matchparen=1
 """"""""""""""""""" leader maps """""""""""""""""""
 let mapleader = ","
 " Ack the word under cursor
+let g:ackprg = 'rg --vimgrep --no-heading'
 nnoremap <leader>a :Ack! --ignore-dir coverage --ignore-dir node_modules --ignore-dir build --ignore-dir deps --ignore-dir _build --ignore-file=is:tags <cword><CR>
   \ 'dir':  'build$\|node_modules$\|coverage$\|deps$\|_build$\|\.pyc$\|\.swp$\|\.git$\|\.hg$\|\.svn$',
 " bufferexplorer: use relative path
