@@ -436,3 +436,9 @@ map <silent> tw :GhcModTypeInsert<CR>
 map <silent> ts :GhcModSplitFunCase<CR>
 map <silent> tq :GhcModType<CR>
 map <silent> te :GhcModTypeClear<CR>
+
+" Haskell vim2hs
+" disable concealing of "enumerations": commatized lists like
+" deriving clauses and LANGUAGE pragmas,
+" otherwise collapsed into a single ellipsis
+let g:haskell_conceal_enumerations = 0
