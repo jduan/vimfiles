@@ -438,6 +438,7 @@ map <silent> tw :GhcModTypeInsert<CR>
 map <silent> ts :GhcModSplitFunCase<CR>
 map <silent> tq :GhcModType<CR>
 map <silent> te :GhcModTypeClear<CR>
+au BufEnter *.hs setl shiftwidth=2
 
 " Haskell vim2hs
 " disable concealing of "enumerations": commatized lists like
