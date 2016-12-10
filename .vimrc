@@ -88,6 +88,7 @@ set encoding=utf-8       " unicode
 set expandtab            " spaces, not tabs!
 set fileignorecase       " ignore file/directory cases when using file names and directories.
 set foldcolumn=0         " no fold column
+set nofoldenable         " disable folding entirely
 set foldlevelstart=0     " start with all folds closed
 set formatoptions=r      " r - re-insert comment leader on newline
 set formatprg=par        " use 'par' to format text with 'gq'
