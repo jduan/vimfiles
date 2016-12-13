@@ -440,10 +440,14 @@ map <silent> tw :GhcModTypeInsert<CR>
 map <silent> ts :GhcModSplitFunCase<CR>
 map <silent> tq :GhcModType<CR>
 map <silent> te :GhcModTypeClear<CR>
-au BufEnter *.hs setl shiftwidth=2
 
 " Haskell vim2hs
 " disable concealing of "enumerations": commatized lists like
 " deriving clauses and LANGUAGE pragmas,
 " otherwise collapsed into a single ellipsis
 let g:haskell_conceal_enumerations = 0
+
+" vim-hindent format haskell file when it's saved!
+let g:hindent_on_save = 1
+let g:hindent_indent_size = 2 " Number of spaces per indentation
+let g:hindent_line_length = 100
