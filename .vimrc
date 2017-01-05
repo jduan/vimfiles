@@ -435,6 +435,9 @@ au BufEnter *.sh setl shiftwidth=2
 " Pbyank in visual mode
 vnoremap p :Pbyank<cr>
 
+" Haskell
+au BufEnter *.hs setl shiftwidth=2
+
 " Haskell ghc-mod
 map <silent> tw :GhcModTypeInsert<CR>
 map <silent> ts :GhcModSplitFunCase<CR>
@@ -449,6 +452,7 @@ imap drv deriving (Show, Eq)
 let g:haskell_conceal_enumerations = 0
 
 " vim-hindent format haskell file when it's saved!
+" https://github.com/alx741/vim-hindent
 let g:hindent_on_save = 1
 let g:hindent_indent_size = 2 " Number of spaces per indentation
 let g:hindent_line_length = 100
