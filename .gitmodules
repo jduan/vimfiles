@@ -175,3 +175,6 @@
 [submodule ".vim/bundle/vim-hindent"]
 	path = .vim/bundle/vim-hindent
 	url = https://github.com/alx741/vim-hindent
+[submodule ".vim/bundle/cql-vim"]
+	path = .vim/bundle/cql-vim
+	url = https://github.com/elubow/cql-vim
