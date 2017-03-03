@@ -178,3 +178,6 @@
 [submodule ".vim/bundle/cql-vim"]
 	path = .vim/bundle/cql-vim
 	url = https://github.com/elubow/cql-vim
+[submodule ".vim/bundle/vim-fish"]
+	path = .vim/bundle/vim-fish
+	url = https://github.com/dag/vim-fish
