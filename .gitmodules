@@ -184,3 +184,6 @@
 [submodule ".vim/bundle/idris-vim"]
 	path = .vim/bundle/idris-vim
 	url = https://github.com/idris-hackers/idris-vim
+[submodule ".vim/bundle/swift.vim"]
+	path = .vim/bundle/swift.vim
+	url = https://github.com/keith/swift.vim
