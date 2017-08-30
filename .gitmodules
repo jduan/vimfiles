@@ -184,3 +184,6 @@
 [submodule ".vim/bundle/swift.vim"]
 	path = .vim/bundle/swift.vim
 	url = https://github.com/keith/swift.vim
+[submodule ".vim/bundle/json5.vim"]
+	path = .vim/bundle/json5.vim
+	url = https://github.com/gutenye/json5.vim
