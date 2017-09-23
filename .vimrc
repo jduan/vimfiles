@@ -215,6 +215,7 @@ endfunc
 
 """"""""""""""" Ctrl-P """""""""""""""
 map <F5> :CtrlPClearAllCaches<CR>
+nnoremap <leader>cc :CtrlPClearAllCaches<CR>
 " Don't limit how many files to scan
 let g:ctrlp_max_files = 0
 let g:ctrlp_cmd = 'CtrlPCurWD'
