@@ -373,8 +373,11 @@ let g:syntastic_check_on_wq = 1
 let g:syntastic_coffee_coffeelint_args="--csv -f /Users/jingjing.duan/.coffeelint.json"
 let g:syntastic_javascript_checkers = ['jshint']
 " let g:syntastic_javascript_jslint_conf = "--sloppy --vars"
+
 " turn on/off checks for given languages
-let g:syntastic_mode_map={ 'mode': 'active',
+" "active" means it's on
+" "passive" means it's on
+let g:syntastic_mode_map={ 'mode': 'passive',
                      \ 'active_filetypes': [],
                      \ 'passive_filetypes': ['java', 'scala'] }
 
