@@ -439,9 +439,6 @@ au BufEnter *.sh setl shiftwidth=2
 " Pbyank in visual mode
 vnoremap p :Pbyank<cr>
 
-" Haskell
-au BufEnter *.hs setl shiftwidth=2
-
 " Haskell ghc-mod
 map <silent> tw :GhcModTypeInsert<CR>
 map <silent> ts :GhcModSplitFunCase<CR>
