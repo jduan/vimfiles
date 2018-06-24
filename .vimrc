@@ -64,6 +64,8 @@ inoremap <C-^> <Esc><C-^>
 nnoremap <C-e> <C-^>
 " C-e doesn't work because of vim-rsi plugin
 inoremap <C-e> <C-^>
+" Haskell: ->
+inoremap <leader>a -><Space>
 " fast save a buffer
 nmap <leader>w :w<cr>
 nmap <leader>wa :wa<cr>
@@ -439,7 +441,15 @@ au BufEnter *.sh setl shiftwidth=2
 " Pbyank in visual mode
 vnoremap p :Pbyank<cr>
 
-" Haskell ghc-mod
+" Haskell
+"
+" vimproc plugin is used by ghc-mod
+" To make vimproc work, you need to build its native extensions
+" * cd .vim/bundle/vimproc.vim
+" * make
+"
+" ghc-mod plugin
+" You need to 'stack install ghc-mod' first.
 map <silent> tw :GhcModTypeInsert<CR>
 map <silent> ts :GhcModSplitFunCase<CR>
 map <silent> tq :GhcModType<CR>
