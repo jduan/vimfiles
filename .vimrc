@@ -456,6 +456,9 @@ map <silent> tq :GhcModType<CR>
 map <silent> te :GhcModTypeClear<CR>
 imap drv deriving (Show, Eq)
 
+" Haskell indent 2 spaces
+au BufEnter *.hs setl shiftwidth=2"
+
 " Haskell vim2hs
 " disable concealing of "enumerations": commatized lists like
 " deriving clauses and LANGUAGE pragmas,
