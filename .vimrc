@@ -379,7 +379,7 @@ let g:syntastic_javascript_checkers = ['jshint']
 " turn on/off checks for given languages
 " "active" means it's on
 " "passive" means it's on
-let g:syntastic_mode_map={ 'mode': 'passive',
+let g:syntastic_mode_map={ 'mode': 'active',
                      \ 'active_filetypes': [],
                      \ 'passive_filetypes': ['java', 'scala'] }
 
