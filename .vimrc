@@ -65,7 +65,7 @@ nnoremap <C-e> <C-^>
 " C-e doesn't work because of vim-rsi plugin
 inoremap <C-e> <C-^>
 " Haskell: ->
-inoremap <leader>a -><Space>
+inoremap <leader>a ->
 " fast save a buffer
 nmap <leader>w :w<cr>
 nmap <leader>wa :wa<cr>
