@@ -469,7 +469,7 @@ let g:haskell_conceal_enumerations = 0
 " https://github.com/alx741/vim-hindent
 let g:hindent_on_save = 1
 let g:hindent_indent_size = 2 " Number of spaces per indentation
-let g:hindent_line_length = 100
+let g:hindent_line_length = 80
 
 " Haskell hlint
 " Install "hlint" via stack and the Syntastic plugin will work out of the box.
