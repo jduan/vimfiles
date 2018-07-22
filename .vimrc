@@ -473,3 +473,7 @@ let g:hindent_line_length = 80
 
 " Haskell hlint
 " Install "hlint" via stack and the Syntastic plugin will work out of the box.
+
+
+" https://github.com/Yggdroot/indentLine
+let g:indentLine_fileTypeExclude = ['haskell']
