@@ -190,3 +190,6 @@
 [submodule ".vim/bundle/vim-terraform"]
 	path = .vim/bundle/vim-terraform
 	url = https://github.com/hashivim/vim-terraform
+[submodule ".vim/bundle/yaml-vim"]
+	path = .vim/bundle/yaml-vim
+	url = https://github.com/mrk21/yaml-vim
