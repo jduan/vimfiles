@@ -322,14 +322,15 @@ cmap w! w !sudo tee % >/dev/null
 " clear screen before running a command
 map :! :!clear;
 
+" This doesn't seem to work for Haskell files in vim 8!
 "Here is an example that can be added to your .vimrc which will setup the
 "supertab chaining for any filetype that has a provided |omnifunc| to
 "first try that, then fall back to supertab's default, <c-p>, completion:
-  autocmd FileType *
-    \ if &omnifunc != '' |
-    \   call SuperTabChain(&omnifunc, "<c-p>") |
-    \   call SuperTabSetDefaultCompletionType("<c-x><c-u>") |
-    \ endif
+  " autocmd FileType *
+  "   \ if &omnifunc != '' |
+  "   \   call SuperTabChain(&omnifunc, "<c-p>") |
+  "   \   call SuperTabSetDefaultCompletionType("<c-x><c-u>") |
+  "   \ endif
 
 " create ~/.vim_undodir if it doesn't exist yet
 silent !mkdir ~/.vim_undodir > /dev/null 2>&1
