@@ -66,6 +66,7 @@ nnoremap <C-e> <C-^>
 inoremap <C-e> <C-^>
 " Haskell: ->
 inoremap <leader>a ->
+inoremap <leader>aa =>
 " fast save a buffer
 nmap <leader>w :w<cr>
 nmap <leader>wa :wa<cr>
