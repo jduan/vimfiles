@@ -476,6 +476,11 @@ let g:hindent_line_length = 80
 " Haskell hlint
 " Install "hlint" via stack and the Syntastic plugin will work out of the box.
 
+" Build tags upon buffer save
+:function BuildHaskellTags()
+:echom  system("hasktags -c .")
+:endfunction
+autocmd FileType haskell autocmd BufWritePost * call BuildHaskellTags()
 
 " https://github.com/Yggdroot/indentLine
 let g:indentLine_fileTypeExclude = ['haskell']
