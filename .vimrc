@@ -480,7 +480,8 @@ let g:hindent_line_length = 80
 :function BuildHaskellTags()
 :echom  system("hasktags -c .")
 :endfunction
-autocmd FileType haskell autocmd BufWritePost * call BuildHaskellTags()
+" uncomment this when working on large projects!
+" autocmd FileType haskell autocmd BufWritePost * call BuildHaskellTags()
 
 " https://github.com/Yggdroot/indentLine
 let g:indentLine_fileTypeExclude = ['haskell']
