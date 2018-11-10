@@ -64,6 +64,8 @@ inoremap <C-^> <Esc><C-^>
 nnoremap <C-e> <C-^>
 " C-e doesn't work because of vim-rsi plugin
 inoremap <C-e> <C-^>
+inoremap <C-h> <Left>
+inoremap <C-l> <Right>
 " Haskell: ->
 inoremap <leader>a ->
 inoremap <leader>aa =>
